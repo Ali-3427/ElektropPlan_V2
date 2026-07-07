@@ -1,0 +1,338 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.heading {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.subheading {
+  margin: 8px 0 0;
+  color: var(--color-text-muted);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 260px) minmax(0, 1.3fr) minmax(320px, 420px);
+  gap: var(--space-4);
+  min-height: 0;
+  flex: 1;
+}
+
+.projectsPanel,
+.groupsPanel,
+.detailPanel {
+  min-height: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  padding: var(--space-4);
+}
+
+.projectsPanel,
+.groupsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.detailPanel {
+  overflow: auto;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.panelTitle {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.panelMeta {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.projectActions,
+.formActions,
+.groupActions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.inlineForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.projectList,
+.groupList,
+.recordList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 0;
+}
+
+.projectList,
+.groupList {
+  overflow: auto;
+}
+
+.projectCard,
+.recordCard,
+.groupSummary {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.12s ease, background 0.12s ease, transform 0.12s ease;
+}
+
+.projectCard {
+  padding: var(--space-3);
+  text-align: left;
+}
+
+.projectCard:hover,
+.recordCard:hover,
+.groupSummary:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface);
+}
+
+.projectCardActive,
+.recordCardActive,
+.groupCardActive .groupSummary {
+  border-color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.projectCardTop,
+.recordTop,
+.groupTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.groupTitleRow .groupTitle {
+  margin-right: auto;
+}
+
+.chevron {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  transition: transform 0.15s ease;
+}
+
+.chevron[data-expanded="true"] {
+  transform: rotate(90deg);
+}
+
+.projectCardTitle,
+.groupTitle,
+.recordTitle {
+  font-weight: 700;
+}
+
+.projectPill,
+.groupBadge,
+.recordBadge,
+.recordQuantity {
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.projectPill,
+.groupBadge {
+  background: color-mix(in srgb, var(--color-primary-soft) 70%, var(--color-surface));
+  color: var(--color-primary-hover);
+}
+
+.recordBadge {
+  background: color-mix(in srgb, var(--color-primary-soft) 55%, var(--color-surface));
+  color: var(--color-primary-hover);
+}
+
+.recordQuantity {
+  background: color-mix(in srgb, var(--color-border) 50%, var(--color-surface));
+  color: var(--color-text-muted);
+}
+
+.projectCardMeta,
+.groupMeta,
+.recordMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.groupCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--color-surface-alt) 75%, white);
+}
+
+.groupCardActive {
+  border-color: var(--color-primary);
+}
+
+.groupHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.groupSummary {
+  padding: var(--space-3);
+  text-align: left;
+}
+
+.duplicateRow {
+  display: flex;
+}
+
+.cableGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.cableCard {
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.cableTitle {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.cableValue {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cableMeta,
+.cableHint,
+.cableError,
+.emptyGroup {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.cableHint {
+  margin-top: 8px;
+  color: var(--color-primary-hover);
+}
+
+.cableError {
+  color: var(--color-danger);
+}
+
+.recordCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  text-align: left;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+}
+
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+  }
+
+  .detailPanel {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 840px) {
+  .header,
+  .panelHeader,
+  .groupHeader {
+    flex-direction: column;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cableGrid {
+    grid-template-columns: 1fr;
+  }
+}

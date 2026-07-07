@@ -1,6 +1,8 @@
+// IMPORTANT: These strings must stay in sync with apps/desktop/preload/src/index.ts
 export const IPC_CHANNELS = Object.freeze({
   CalcMotor: "calc:motor",
   CalcVoltageDrop: "calc:vd",
+  CalcVoltageDropGroup: "calc:vd-group",
   CalcCable: "calc:cable",
   CalcCableRuler: "calc:cable-ruler",
   CalcGroupCableSuggest: "calc:group-cable-suggest",
@@ -26,6 +28,7 @@ export const IPC_CHANNELS = Object.freeze({
   SettingsList: "settings:list",
   SettingsDelete: "settings:delete",
   AppEngineVersion: "app:engine-version",
+  AppVersion: "app:version",
   MaterialsListCategories: "materials:list-categories",
   MaterialsUpsertCategory: "materials:upsert-category",
   MaterialsDeleteCategory: "materials:delete-category",

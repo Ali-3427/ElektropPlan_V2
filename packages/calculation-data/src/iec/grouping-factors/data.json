@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "id": "iec-60364-5-52-grouping-factors-v1",
+    "standard": "IEC 60364-5-52",
+    "revision": "v1",
+    "source": "Tablo B.52.17",
+    "validFrom": "2026-04-19",
+    "notes": "Tek katmanlı, delikli kablo tavasında birden fazla devre. Not: 6'dan fazla devre için ek faktörler tam IEC tablosundan alınmalıdır."
+  },
+  "entries": [
+    { "circuits": 1, "factor": 1 },
+    { "circuits": 2, "factor": 0.88 },
+    { "circuits": 3, "factor": 0.82 },
+    { "circuits": 4, "factor": 0.77 },
+    { "circuits": 6, "factor": 0.73 }
+  ]
+}

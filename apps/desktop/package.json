@@ -1,0 +1,61 @@
+{
+  "name": "elektroplan-desktop",
+  "version": "1.8.0",
+  "private": true,
+  "description": "ElektroPlan â€” Elektrik TesisatÄ± Hesaplama ProgramÄ±",
+  "author": "ElektroPlan",
+  "main": "apps/desktop/main/dist/index.js",
+  "build": {
+    "appId": "com.elektroplan.desktop",
+    "productName": "ElektroPlan",
+    "copyright": "Copyright Â© 2026 ElektroPlan",
+    "directories": {
+      "app": "bundle",
+      "buildResources": "buildResources",
+      "output": "release"
+    },
+    "files": [
+      "**/*",
+      "!**/*.map",
+      "!**/*.d.ts",
+      "!**/*.d.ts.map"
+    ],
+    "win": {
+      "icon": "buildResources/icon.ico",
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ElektroPlan",
+      "installerIcon": "buildResources/icon.ico",
+      "uninstallerIcon": "buildResources/icon.ico"
+    },
+    "asar": true,
+    "npmRebuild": true,
+    "asarUnpack": [
+      "**/better-sqlite3/**/*",
+      "**/*.node"
+    ]
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "scripts": {
+    "build:bundle-inputs": "npm --prefix ../../packages/storage run build && npm --prefix ../../packages/exporters run build && npm --prefix ../../packages/calculation-data run build && npm --prefix ../../packages/calculation-core run build && npm --prefix ../../packages/contracts run build && npm --prefix preload run build && npm --prefix main run build && npm --prefix renderer run build",
+    "bundle": "node scripts/bundle.mjs",
+    "pack": "npm run build:bundle-inputs && node scripts/bundle.mjs && electron-builder --dir",
+    "dist": "npm run build:bundle-inputs && node scripts/bundle.mjs && electron-builder",
+    "dist:win": "npm run build:bundle-inputs && node scripts/bundle.mjs && electron-builder --win"
+  }
+}

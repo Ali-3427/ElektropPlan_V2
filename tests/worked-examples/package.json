@@ -1,0 +1,21 @@
+{
+  "name": "@elektroplan/tests-worked-examples",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/runner.js",
+  "types": "./dist/runner.d.ts",
+  "files": [
+    "dist",
+    "fixtures"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty false",
+    "lint": "eslint runner.ts --ext .ts",
+    "test": "tsc -b && node ./dist/runner.js"
+  },
+  "dependencies": {
+    "@elektroplan/calculation-core": "workspace:*"
+  }
+}

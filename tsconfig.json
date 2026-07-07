@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/calculation-core" },
+    { "path": "./packages/calculation-data" },
+    { "path": "./packages/contracts" },
+    { "path": "./packages/storage" },
+    { "path": "./packages/exporters" },
+    { "path": "./apps/desktop/main" },
+    { "path": "./apps/desktop/preload" },
+    { "path": "./tests/worked-examples" },
+    { "path": "./tests/property" }
+  ]
+}

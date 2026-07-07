@@ -1,0 +1,30 @@
+{
+  "name": "@elektroplan/calculation-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty false",
+    "lint": "eslint src --ext .ts",
+    "test": "tsc -b && vitest run --configLoader native"
+  },
+  "dependencies": {
+    "@elektroplan/calculation-data": "workspace:*"
+  },
+  "devDependencies": {
+    "vitest": "^3.1.2"
+  }
+}

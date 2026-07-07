@@ -7,6 +7,8 @@ import type {
   MotorResponse,
   ProtectionRequest,
   ProtectionResponse,
+  VoltageDropGroupRequest,
+  VoltageDropGroupResponse,
   VoltageDropRequest,
   VoltageDropResponse,
 } from "@elektroplan/contracts";
@@ -19,9 +21,11 @@ type IpcEnvelope<TValue> =
       readonly error: { readonly code: string; readonly message: string };
     };
 
+// IMPORTANT: These channel strings must stay in sync with apps/desktop/main/src/ipc/channels.ts
 const CHANNELS = Object.freeze({
   CalcMotor: "calc:motor",
   CalcVoltageDrop: "calc:vd",
+  CalcVoltageDropGroup: "calc:vd-group",
   CalcCable: "calc:cable",
   CalcCableRuler: "calc:cable-ruler",
   CalcGroupCableSuggest: "calc:group-cable-suggest",
@@ -47,6 +51,7 @@ const CHANNELS = Object.freeze({
   SettingsList: "settings:list",
   SettingsDelete: "settings:delete",
   AppEngineVersion: "app:engine-version",
+  AppVersion: "app:version",
   MaterialsListCategories: "materials:list-categories",
   MaterialsUpsertCategory: "materials:upsert-category",
   MaterialsDeleteCategory: "materials:delete-category",
@@ -188,6 +193,7 @@ export interface ElektroPlanBridge {
   readonly calc: Readonly<{
     motor(request: MotorRequest): Promise<MotorResponse>;
     voltageDrop(request: VoltageDropRequest): Promise<VoltageDropResponse>;
+    voltageDropGroup(request: VoltageDropGroupRequest): Promise<VoltageDropGroupResponse>;
     cable(request: CableRequest): Promise<CableResponse>;
     cableRuler(request: CableRulerRequest): Promise<CableRulerResponse>;
     groupCableSuggest(groupTotalCurrentA: number): Promise<GroupCableSuggestionResult>;
@@ -225,6 +231,7 @@ export interface ElektroPlanBridge {
   }>;
   readonly app: Readonly<{
     engineVersion(): Promise<string>;
+    version(): Promise<string>;
   }>;
   readonly materials: Readonly<{
     listCategories(): Promise<readonly MaterialCategory[]>;
@@ -255,6 +262,7 @@ const bridge: ElektroPlanBridge = {
   calc: {
     motor: (request) => invoke(CHANNELS.CalcMotor, request),
     voltageDrop: (request) => invoke(CHANNELS.CalcVoltageDrop, request),
+    voltageDropGroup: (request) => invoke(CHANNELS.CalcVoltageDropGroup, request),
     cable: (request) => invoke(CHANNELS.CalcCable, request),
     cableRuler: (request) => invoke(CHANNELS.CalcCableRuler, request),
     groupCableSuggest: (groupTotalCurrentA) =>
@@ -295,6 +303,7 @@ const bridge: ElektroPlanBridge = {
   },
   app: {
     engineVersion: () => invoke(CHANNELS.AppEngineVersion),
+    version: () => invoke(CHANNELS.AppVersion),
   },
   materials: {
     listCategories: () => invoke(CHANNELS.MaterialsListCategories),

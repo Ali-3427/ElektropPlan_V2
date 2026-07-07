@@ -1,5 +1,7 @@
+import { randomUUID } from "node:crypto";
+
 import { ENGINE_VERSION } from "@elektroplan/calculation-core";
-import { dialog, type IpcMain, type IpcMainInvokeEvent } from "electron";
+import { app, dialog, type IpcMain, type IpcMainInvokeEvent } from "electron";
 
 import type { AppServices } from "../services/index.js";
 import { IPC_CHANNELS, type IpcEnvelope } from "./channels.js";
@@ -8,6 +10,11 @@ type Handler = (
   event: IpcMainInvokeEvent,
   payload: unknown,
 ) => Promise<unknown> | unknown;
+
+export interface IpcSecurityOptions {
+  readonly devServerUrl?: string;
+  readonly isDevelopment: boolean;
+}
 
 function toError(err: unknown): { code: string; message: string } {
   if (err instanceof Error) {
@@ -27,6 +34,54 @@ function wrap(handler: Handler): Handler {
       return envelope;
     }
   };
+}
+
+function isTrustedSender(
+  event: IpcMainInvokeEvent,
+  options: IpcSecurityOptions,
+): boolean {
+  const sender = event.sender as { getURL?: () => string };
+  const senderUrl = sender.getURL?.();
+
+  if (typeof senderUrl !== "string" || senderUrl.length === 0) {
+    return false;
+  }
+
+  if (options.isDevelopment && options.devServerUrl) {
+    const senderOrigin = extractHttpOrigin(senderUrl);
+    const expectedOrigin = extractHttpOrigin(options.devServerUrl);
+
+    if (senderOrigin === null || expectedOrigin === null) {
+      return false;
+    }
+
+    return senderOrigin === expectedOrigin;
+  }
+
+  return senderUrl.startsWith("file://");
+}
+
+function extractHttpOrigin(url: string): string | null {
+  const match = /^(https?:\/\/[^/]+)/i.exec(url);
+  return match?.[1] ?? null;
+}
+
+function secureHandle(
+  ipcMain: IpcMain,
+  channel: string,
+  options: IpcSecurityOptions,
+  handler: Handler,
+): void {
+  ipcMain.handle(
+    channel,
+    wrap((event, payload) => {
+      if (!isTrustedSender(event, options)) {
+        throw new Error(`Blocked IPC request on '${channel}' from an untrusted renderer.`);
+      }
+
+      return handler(event, payload);
+    }),
+  );
 }
 
 function assertOptionalGroupId(payload: unknown): string | undefined {
@@ -142,197 +197,322 @@ function assertGroupTotalCurrentPayload(payload: unknown): number {
   );
 }
 
+function assertMaterialsImportPayload(payload: unknown): {
+  filePath: string;
+  mode: "merge";
+} {
+  if (typeof payload !== "object" || payload === null) {
+    throw new TypeError("materials:import-excel payload must be an object.");
+  }
+
+  const { filePath, mode } = payload as {
+    filePath?: unknown;
+    mode?: unknown;
+  };
+
+  if (typeof filePath !== "string" || filePath.length === 0) {
+    throw new TypeError("materials:import-excel payload must include a non-empty `filePath`.");
+  }
+
+  if (mode !== "merge") {
+    throw new TypeError("materials:import-excel payload must include mode='merge'.");
+  }
+
+  return { filePath, mode };
+}
+
 export function registerIpcHandlers(
   ipcMain: IpcMain,
   services: AppServices,
+  securityOptions: IpcSecurityOptions,
 ): void {
-  ipcMain.handle(
+  const excelImportHandles = new Map<string, string>();
+
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.CalcMotor,
-    wrap((_event, payload) => services.calculate.runMotor(payload)),
+    securityOptions,
+    (_event, payload) => services.calculate.runMotor(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.CalcVoltageDrop,
-    wrap((_event, payload) => services.calculate.runVoltageDrop(payload)),
+    securityOptions,
+    (_event, payload) => services.calculate.runVoltageDrop(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
+    IPC_CHANNELS.CalcVoltageDropGroup,
+    securityOptions,
+    (_event, payload) => services.calculate.runVoltageDropGroup(payload),
+  );
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.CalcCable,
-    wrap((_event, payload) => services.calculate.runCable(payload)),
+    securityOptions,
+    (_event, payload) => services.calculate.runCable(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.CalcCableRuler,
-    wrap((_event, payload) => services.calculate.runCableRuler(payload)),
+    securityOptions,
+    (_event, payload) => services.calculate.runCableRuler(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.CalcGroupCableSuggest,
-    wrap((_event, payload) =>
+    securityOptions,
+    (_event, payload) =>
       services.calculate.runGroupCableSuggest(assertGroupTotalCurrentPayload(payload)),
-    ),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.CalcProtection,
-    wrap((_event, payload) => services.calculate.runProtection(payload)),
+    securityOptions,
+    (_event, payload) => services.calculate.runProtection(payload),
   );
 
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.DataMotorTable,
-    wrap(() => services.calculate.listMotorTableEntries()),
+    securityOptions,
+    () => services.calculate.listMotorTableEntries(),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.DataCableRulerTable,
-    wrap(() => services.calculate.listCableRulerEntries()),
+    securityOptions,
+    () => services.calculate.listCableRulerEntries(),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.DataVoltageDropProfiles,
-    wrap(() => services.calculate.listVoltageDropProfiles()),
+    securityOptions,
+    () => services.calculate.listVoltageDropProfiles(),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.DataDefaultVoltageDropProfile,
-    wrap(() => services.calculate.getDefaultVoltageDropProfile()),
+    securityOptions,
+    () => services.calculate.getDefaultVoltageDropProfile(),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.DataInstallationMethods,
-    wrap(() => services.calculate.getInstallationMethods()),
+    securityOptions,
+    () => services.calculate.getInstallationMethods(),
   );
 
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.RecordsList,
-    wrap((_event, payload) =>
-      services.records.listRecords(
-        assertOptionalGroupId(payload) === undefined
-          ? undefined
-          : { groupId: assertOptionalGroupId(payload)! },
-      ),
-    ),
+    securityOptions,
+    (_event, payload) => {
+      const groupId = assertOptionalGroupId(payload);
+      return services.records.listRecords(
+        groupId === undefined ? undefined : { groupId },
+      );
+    },
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.RecordsGet,
-    wrap((_event, payload) => services.records.getRecord(assertIdPayload(payload))),
+    securityOptions,
+    (_event, payload) => services.records.getRecord(assertIdPayload(payload)),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.RecordsSave,
-    wrap((_event, payload) => services.records.saveRecord(payload)),
+    securityOptions,
+    (_event, payload) => services.records.saveRecord(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.RecordsDelete,
-    wrap((_event, payload) =>
+    securityOptions,
+    (_event, payload) =>
       services.records.deleteRecord(assertIdPayload(payload)),
-    ),
   );
 
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.GroupsList,
-    wrap(() => services.records.listGroups()),
+    securityOptions,
+    () => services.records.listGroups(),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.GroupsSave,
-    wrap((_event, payload) => services.records.saveGroup(payload)),
+    securityOptions,
+    (_event, payload) => services.records.saveGroup(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.GroupsDelete,
-    wrap((_event, payload) =>
+    securityOptions,
+    (_event, payload) =>
       services.records.deleteGroup(assertIdPayload(payload)),
-    ),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.GroupsDuplicate,
-    wrap((_event, payload) => {
+    securityOptions,
+    (_event, payload) => {
       const { newTitle, sourceGroupId } = assertDuplicateGroupPayload(payload);
       return services.records.duplicateGroup(sourceGroupId, newTitle);
-    }),
+    },
   );
 
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.ExportJson,
-    wrap((_event, payload) => services.export.exportJson(payload)),
+    securityOptions,
+    (_event, payload) => services.export.exportJson(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.ExportExcel,
-    wrap((_event, payload) => services.export.exportExcel(payload)),
+    securityOptions,
+    (_event, payload) => services.export.exportExcel(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.ExportPdf,
-    wrap((_event, payload) => services.export.exportPdf(payload)),
+    securityOptions,
+    (_event, payload) => services.export.exportPdf(payload),
   );
 
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.SettingsGet,
-    wrap((_event, payload) => services.settings.getSetting(assertKeyPayload(payload))),
+    securityOptions,
+    (_event, payload) => services.settings.getSetting(assertKeyPayload(payload)),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.SettingsSet,
-    wrap((_event, payload) => {
+    securityOptions,
+    (_event, payload) => {
       const { key, value } = assertSettingSetPayload(payload);
       return services.settings.setSetting(key, value as never);
-    }),
+    },
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.SettingsList,
-    wrap(() => services.settings.listSettings()),
+    securityOptions,
+    () => services.settings.listSettings(),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.SettingsDelete,
-    wrap((_event, payload) =>
+    securityOptions,
+    (_event, payload) =>
       services.settings.deleteSetting(assertKeyPayload(payload)),
-    ),
   );
 
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.AppEngineVersion,
-    wrap(() => ENGINE_VERSION),
+    securityOptions,
+    () => ENGINE_VERSION,
   );
 
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
+    IPC_CHANNELS.AppVersion,
+    securityOptions,
+    () => app.getVersion(),
+  );
+
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.MaterialsListCategories,
-    wrap(() => services.materials.listCategories()),
+    securityOptions,
+    () => services.materials.listCategories(),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.MaterialsUpsertCategory,
-    wrap((_event, payload) => services.materials.upsertCategory(payload)),
+    securityOptions,
+    (_event, payload) => services.materials.upsertCategory(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.MaterialsDeleteCategory,
-    wrap((_event, payload) => services.materials.deleteCategory(payload)),
+    securityOptions,
+    (_event, payload) => services.materials.deleteCategory(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.MaterialsList,
-    wrap((_event, payload) => services.materials.listMaterials(payload)),
+    securityOptions,
+    (_event, payload) => services.materials.listMaterials(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.MaterialsUpsert,
-    wrap((_event, payload) => services.materials.upsertMaterial(payload)),
+    securityOptions,
+    (_event, payload) => services.materials.upsertMaterial(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.MaterialsDelete,
-    wrap((_event, payload) => services.materials.deleteMaterial(payload)),
+    securityOptions,
+    (_event, payload) => services.materials.deleteMaterial(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.MaterialsImportExcel,
-    wrap((_event, payload) => services.materials.importExcel(payload)),
+    securityOptions,
+    async (_event, payload) => {
+      const { filePath, mode } = assertMaterialsImportPayload(payload);
+      const resolvedPath = excelImportHandles.get(filePath);
+
+      if (resolvedPath === undefined) {
+        throw new Error("Excel import handle is missing, expired, or invalid.");
+      }
+
+      excelImportHandles.delete(filePath);
+      return services.materials.importExcel({ filePath: resolvedPath, mode });
+    },
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.MaterialsPickExcel,
-    wrap(async () => {
+    securityOptions,
+    async () => {
       const result = await dialog.showOpenDialog({
         properties: ["openFile"],
         filters: [{ name: "Excel", extensions: ["xlsx"] }],
       });
-      return result.canceled ? null : (result.filePaths[0] ?? null);
-    }),
+
+      const selectedPath = result.filePaths[0] ?? null;
+      if (result.canceled || selectedPath === null) {
+        return null;
+      }
+
+      const importHandle = randomUUID();
+      excelImportHandles.set(importHandle, selectedPath);
+      return importHandle;
+    },
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.AssignmentsListForRecords,
-    wrap((_event, payload) =>
-      services.materials.listAssignments(
-        (payload as { recordIds: string[] }).recordIds,
-      ),
-    ),
+    securityOptions,
+    (_event, payload) => services.materials.listAssignments(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.AssignmentsUpsert,
-    wrap((_event, payload) => services.materials.upsertAssignment(payload)),
+    securityOptions,
+    (_event, payload) => services.materials.upsertAssignment(payload),
   );
-  ipcMain.handle(
+  secureHandle(
+    ipcMain,
     IPC_CHANNELS.AssignmentsDelete,
-    wrap((_event, payload) => services.materials.deleteAssignment(payload)),
+    securityOptions,
+    (_event, payload) => services.materials.deleteAssignment(payload),
   );
 }

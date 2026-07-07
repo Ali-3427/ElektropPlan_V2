@@ -1,0 +1,38 @@
+{
+  "input": {
+    "rejected": {
+      "mode": "table",
+      "kW": 110,
+      "voltage": 380
+    },
+    "accepted": {
+      "mode": "table",
+      "kW": 110,
+      "voltage": 220
+    }
+  },
+  "expectedOutput": {
+    "rejectedMessage": "Motor table row 110 kW does not provide a 380 V current.",
+    "accepted": {
+      "formulaVariant": "table-mode-220V",
+      "value": {
+        "mode": "table",
+        "kW": 110,
+        "PS": 150,
+        "cosPhi": 0.88,
+        "efficiencyPercent": 92,
+        "currentA": 204,
+        "cableSpec": "3 x 120 + 70"
+      },
+      "assumptions": [
+        {
+          "field": "source",
+          "usedValue": "table",
+          "source": "estimated"
+        }
+      ]
+    }
+  },
+  "source": "Locked motor ruler dataset from master plan §2.6, row kW=110 with currentA_380V=null.",
+  "rationale": "Captures the mandatory rejection of unavailable 380 V data while preserving the valid 220 V table result."
+}

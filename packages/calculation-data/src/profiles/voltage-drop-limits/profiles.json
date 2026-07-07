@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "id": "voltage-drop-limits-v1",
+    "standard": "ElektroPlan VD Limit Profiles",
+    "revision": "v1",
+    "source": "master plan §M2.P6, decision D-3",
+    "validFrom": "2026-04-19",
+    "notes": "4 shipped profiles. Default: power-5pct. Values are limit percentages (%)."
+  },
+  "defaultProfileId": "power-5pct",
+  "profiles": [
+    {
+      "id": "lighting-3pct",
+      "titleKey": "vdProfile.lighting",
+      "titleTr": "Aydınlatma devreleri",
+      "limitPercent": 3
+    },
+    {
+      "id": "power-5pct",
+      "titleKey": "vdProfile.power",
+      "titleTr": "Güç devreleri",
+      "limitPercent": 5
+    },
+    {
+      "id": "motor-feeder-5pct",
+      "titleKey": "vdProfile.motorFeeder",
+      "titleTr": "Motor besleme",
+      "limitPercent": 5
+    },
+    {
+      "id": "total-installation-4pct",
+      "titleKey": "vdProfile.totalInstallation",
+      "titleTr": "Tesis geneli",
+      "limitPercent": 4
+    }
+  ]
+}

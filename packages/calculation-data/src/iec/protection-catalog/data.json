@@ -1,0 +1,243 @@
+{
+  "metadata": {
+    "id": "iec-protection-catalog-seed",
+    "standard": "project-seed-catalog",
+    "revision": "v1",
+    "source": "Manual seed dataset for recommendation-only protection lookup. Not an IEC sizing table and not vendor-authoritative.",
+    "validFrom": "2026-04-19",
+    "notes": "Narrow v1 starter catalog for M2.P7 and M1.P6 unblock. Use for candidate recommendations only; do not use as a cable-sizing gate or pass/fail rule."
+  },
+  "columns": [
+    "id",
+    "family",
+    "poles",
+    "nominalCurrentA",
+    "breakingCapacityKa",
+    "curve",
+    "residualCurrentMa",
+    "voltageV",
+    "sourceNote"
+  ],
+  "entries": [
+    {
+      "id": "mcb-1p-b-6a-6ka",
+      "family": "MCB",
+      "poles": 1,
+      "nominalCurrentA": 6,
+      "breakingCapacityKa": 6,
+      "curve": "B",
+      "residualCurrentMa": null,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mcb-1p-b-10a-6ka",
+      "family": "MCB",
+      "poles": 1,
+      "nominalCurrentA": 10,
+      "breakingCapacityKa": 6,
+      "curve": "B",
+      "residualCurrentMa": null,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mcb-1p-c-16a-6ka",
+      "family": "MCB",
+      "poles": 1,
+      "nominalCurrentA": 16,
+      "breakingCapacityKa": 6,
+      "curve": "C",
+      "residualCurrentMa": null,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mcb-1p-c-20a-6ka",
+      "family": "MCB",
+      "poles": 1,
+      "nominalCurrentA": 20,
+      "breakingCapacityKa": 6,
+      "curve": "C",
+      "residualCurrentMa": null,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mcb-1p-c-25a-6ka",
+      "family": "MCB",
+      "poles": 1,
+      "nominalCurrentA": 25,
+      "breakingCapacityKa": 6,
+      "curve": "C",
+      "residualCurrentMa": null,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mcb-1p-c-32a-6ka",
+      "family": "MCB",
+      "poles": 1,
+      "nominalCurrentA": 32,
+      "breakingCapacityKa": 6,
+      "curve": "C",
+      "residualCurrentMa": null,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mcb-3p-c-16a-10ka",
+      "family": "MCB",
+      "poles": 3,
+      "nominalCurrentA": 16,
+      "breakingCapacityKa": 10,
+      "curve": "C",
+      "residualCurrentMa": null,
+      "voltageV": 400,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mcb-3p-c-20a-10ka",
+      "family": "MCB",
+      "poles": 3,
+      "nominalCurrentA": 20,
+      "breakingCapacityKa": 10,
+      "curve": "C",
+      "residualCurrentMa": null,
+      "voltageV": 400,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mcb-3p-c-25a-10ka",
+      "family": "MCB",
+      "poles": 3,
+      "nominalCurrentA": 25,
+      "breakingCapacityKa": 10,
+      "curve": "C",
+      "residualCurrentMa": null,
+      "voltageV": 400,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mcb-3p-c-32a-10ka",
+      "family": "MCB",
+      "poles": 3,
+      "nominalCurrentA": 32,
+      "breakingCapacityKa": 10,
+      "curve": "C",
+      "residualCurrentMa": null,
+      "voltageV": 400,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mccb-3p-40a-25ka",
+      "family": "MCCB",
+      "poles": 3,
+      "nominalCurrentA": 40,
+      "breakingCapacityKa": 25,
+      "curve": null,
+      "residualCurrentMa": null,
+      "voltageV": 400,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mccb-3p-63a-25ka",
+      "family": "MCCB",
+      "poles": 3,
+      "nominalCurrentA": 63,
+      "breakingCapacityKa": 25,
+      "curve": null,
+      "residualCurrentMa": null,
+      "voltageV": 400,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "mccb-3p-80a-25ka",
+      "family": "MCCB",
+      "poles": 3,
+      "nominalCurrentA": 80,
+      "breakingCapacityKa": 25,
+      "curve": null,
+      "residualCurrentMa": null,
+      "voltageV": 400,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "rcbo-2p-c-16a-30ma-6ka",
+      "family": "RCBO",
+      "poles": 2,
+      "nominalCurrentA": 16,
+      "breakingCapacityKa": 6,
+      "curve": "C",
+      "residualCurrentMa": 30,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "rcbo-2p-c-20a-30ma-6ka",
+      "family": "RCBO",
+      "poles": 2,
+      "nominalCurrentA": 20,
+      "breakingCapacityKa": 6,
+      "curve": "C",
+      "residualCurrentMa": 30,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "rcbo-2p-c-32a-30ma-6ka",
+      "family": "RCBO",
+      "poles": 2,
+      "nominalCurrentA": 32,
+      "breakingCapacityKa": 6,
+      "curve": "C",
+      "residualCurrentMa": 30,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "rcd-2p-25a-30ma",
+      "family": "RCD",
+      "poles": 2,
+      "nominalCurrentA": 25,
+      "breakingCapacityKa": null,
+      "curve": null,
+      "residualCurrentMa": 30,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "rcd-2p-40a-30ma",
+      "family": "RCD",
+      "poles": 2,
+      "nominalCurrentA": 40,
+      "breakingCapacityKa": null,
+      "curve": null,
+      "residualCurrentMa": 30,
+      "voltageV": 230,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "rcd-4p-40a-30ma",
+      "family": "RCD",
+      "poles": 4,
+      "nominalCurrentA": 40,
+      "breakingCapacityKa": null,
+      "curve": null,
+      "residualCurrentMa": 30,
+      "voltageV": 400,
+      "sourceNote": "Seed catalog starter entry."
+    },
+    {
+      "id": "rcd-4p-63a-30ma",
+      "family": "RCD",
+      "poles": 4,
+      "nominalCurrentA": 63,
+      "breakingCapacityKa": null,
+      "curve": null,
+      "residualCurrentMa": 30,
+      "voltageV": 400,
+      "sourceNote": "Seed catalog starter entry."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "input": {
+    "rejected": {
+      "mode": "formula",
+      "phase": 3,
+      "voltageMode": "LL",
+      "P_out": 7.5,
+      "voltage": 380,
+      "cosPhi": 0.85,
+      "efficiencyPercent": 0.85
+    },
+    "accepted": {
+      "mode": "formula",
+      "phase": 3,
+      "voltageMode": "LL",
+      "P_out": 7.5,
+      "voltage": 380,
+      "cosPhi": 0.85,
+      "efficiencyPercent": 85
+    }
+  },
+  "expectedOutput": {
+    "rejectedMessage": "efficiencyPercent must be between 1 and 100.",
+    "accepted": {
+      "formulaVariant": "three-phase-LL",
+      "value": {
+        "mode": "formula",
+        "currentA": 15.771724709241282,
+        "inputPowerKW": 8.823529411764707,
+        "apparentPowerKVA": 10.380622837370243,
+        "efficiencyPercent": 85
+      }
+    }
+  },
+  "source": "Formula-mode validation contract for efficiency entered as percent values.",
+  "rationale": "Rejects fractional efficiency input such as 0.85 before the engine scales it by 1/100 and inflates current by 100x."
+}

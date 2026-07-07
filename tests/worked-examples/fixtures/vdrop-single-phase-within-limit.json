@@ -1,0 +1,24 @@
+{
+  "input": {
+    "mode": "current",
+    "systemType": "single-phase-ac-two-conductor",
+    "impedanceMode": "simplified",
+    "conductorMaterial": "copper",
+    "lengthM": 35,
+    "sectionMm2": 10,
+    "baseVoltageV": 230,
+    "currentA": 32,
+    "cosPhi": 0.82
+  },
+  "expectedOutput": {
+    "formulaVariant": "single-phase-ac-two-conductor",
+    "assumptions": [],
+    "value": {
+      "reactanceOhmPerKm": 0,
+      "deltaVVolts": 3.1666431999999998,
+      "deltaVPercent": 1.3768013913043478
+    }
+  },
+  "source": "Hand calc from master plan §2.3 single-phase AC voltage-drop formula with simplified mode forcing X=0.",
+  "rationale": "Provides a within-limit single-phase voltage-drop example that stays entirely on the locked formula path."
+}

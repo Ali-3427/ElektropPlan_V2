@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "id": "iec-60364-5-52-temperature-factors-v1",
+    "standard": "IEC 60364-5-52",
+    "revision": "v1",
+    "source": "Tablo B.52.14 + Tablo B.52.15",
+    "validFrom": "2026-04-19",
+    "notes": "Uygulama kuralı: Metot D → Tablo B.52.15. Diğer tüm metotlar → Tablo B.52.14."
+  },
+  "air": [
+    { "temperatureC": 20, "pvc70": 1.12, "xlpeEpr90": 1.08 },
+    { "temperatureC": 30, "pvc70": 1, "xlpeEpr90": 1 },
+    { "temperatureC": 40, "pvc70": 0.87, "xlpeEpr90": 0.91 },
+    { "temperatureC": 50, "pvc70": 0.71, "xlpeEpr90": 0.82 }
+  ],
+  "underground": [
+    { "temperatureC": 10, "pvc70": 1.1, "xlpeEpr90": 1.07 },
+    { "temperatureC": 15, "pvc70": 1.05, "xlpeEpr90": 1.04 },
+    { "temperatureC": 20, "pvc70": 1, "xlpeEpr90": 1 },
+    { "temperatureC": 25, "pvc70": 0.95, "xlpeEpr90": 0.96 },
+    { "temperatureC": 30, "pvc70": 0.89, "xlpeEpr90": 0.93 },
+    { "temperatureC": 35, "pvc70": 0.84, "xlpeEpr90": 0.89 },
+    { "temperatureC": 40, "pvc70": 0.77, "xlpeEpr90": 0.85 },
+    { "temperatureC": 45, "pvc70": 0.71, "xlpeEpr90": 0.8 },
+    { "temperatureC": 50, "pvc70": 0.63, "xlpeEpr90": 0.76 },
+    { "temperatureC": 55, "pvc70": 0.55, "xlpeEpr90": 0.71 }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@elektroplan/storage",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty false",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run --pool threads src/index.test.ts"
+  },
+  "dependencies": {
+    "@elektroplan/contracts": "file:../contracts",
+    "@types/better-sqlite3": "^7.6.13",
+    "better-sqlite3": "^12.9.0",
+    "vitest": "^4.1.4",
+    "zod": "^3.25.76"
+  }
+}

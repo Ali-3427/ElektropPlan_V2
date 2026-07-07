@@ -1,0 +1,25 @@
+{
+  "input": {
+    "mode": "formula",
+    "phase": 3,
+    "voltageMode": "LN",
+    "P_out": 15,
+    "voltage": 219.3931022920578,
+    "cosPhi": 0.86,
+    "efficiencyPercent": 87
+  },
+  "expectedOutput": {
+    "formulaVariant": "three-phase-LN",
+    "value": {
+      "mode": "formula",
+      "phase": 3,
+      "voltageMode": "LN",
+      "currentA": 30.459960177564355,
+      "inputPowerKW": 17.24137931034483,
+      "apparentPowerKVA": 20.04811547714515
+    },
+    "assumptions": []
+  },
+  "source": "Hand calc from master plan §2.2 locked three-phase line-neutral motor-current formula, using V_LN = 380 / sqrt(3).",
+  "rationale": "Verifies the distinct LN code path with the same physical load as the LL reference case."
+}

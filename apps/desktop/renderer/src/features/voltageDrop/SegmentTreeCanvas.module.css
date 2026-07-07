@@ -1,0 +1,132 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.controlButton,
+.controlButtonWide {
+  min-height: 36px;
+  min-width: 36px;
+  padding: 0 10px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.controlButtonWide {
+  min-width: 72px;
+}
+
+.controlButton:hover,
+.controlButtonWide:hover {
+  border-color: var(--color-primary);
+}
+
+.controlButton:focus-visible,
+.controlButtonWide:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.controlButton:disabled,
+.controlButtonWide:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.canvas {
+  min-height: 520px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.edge {
+  fill: none;
+  stroke: color-mix(in srgb, var(--color-primary) 38%, var(--color-border));
+  stroke-width: 2;
+}
+
+.nodeGroup {
+  cursor: pointer;
+  outline: none;
+}
+
+.nodeRect {
+  fill: var(--color-surface-alt);
+  stroke: var(--color-border-strong);
+  stroke-width: 1.4;
+}
+
+.nodeTitle {
+  fill: var(--color-text);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.nodeMeta {
+  fill: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.nodeMetaSmall {
+  fill: var(--color-text-muted);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.nodeOk .nodeRect {
+  fill: color-mix(in srgb, var(--color-success-soft) 70%, var(--color-surface));
+  stroke: color-mix(in srgb, var(--color-success) 32%, var(--color-border-strong));
+}
+
+.nodeWarn .nodeRect {
+  fill: color-mix(in srgb, var(--color-warning-soft) 65%, var(--color-surface));
+  stroke: color-mix(in srgb, var(--color-warning) 40%, var(--color-border-strong));
+}
+
+.nodeBad .nodeRect {
+  fill: color-mix(in srgb, var(--color-danger) 12%, var(--color-surface));
+  stroke: color-mix(in srgb, var(--color-danger) 38%, var(--color-border-strong));
+}
+
+.nodeMissing .nodeRect {
+  fill: var(--color-surface-alt);
+  stroke: var(--color-border-strong);
+  stroke-dasharray: 4 3;
+}
+
+.nodeSelected .nodeRect {
+  stroke: var(--color-primary);
+  stroke-width: 2.2;
+}
+
+.nodeGroup:focus-visible .nodeRect {
+  stroke: var(--color-primary);
+  stroke-width: 2.2;
+}
+
+@media (max-width: 880px) {
+  .canvas {
+    min-height: 420px;
+  }
+}

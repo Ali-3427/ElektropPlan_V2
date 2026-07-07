@@ -1,0 +1,142 @@
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  /* Surfaces — true white with whisper of warm grey */
+  --color-bg: #fafaf9;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f6f5f2;
+  --color-border: #ece9e2;
+  --color-border-strong: #d6d1c4;
+
+  /* Text — near-black on warm whites */
+  --color-text: #1a1410;
+  --color-text-muted: #5a4f45;
+  --color-text-subtle: #8a7f72;
+
+  /* Primary / accent — amber wordmark */
+  --color-primary: #d97706;
+  --color-primary-hover: #b45309;
+  --color-primary-soft: #fef3c7;
+  --color-accent: #d97706;
+  --color-accent-hover: #b45309;
+  --color-accent-soft: #fef3c7;
+
+  /* Status */
+  --color-danger: #dc2626;
+  --color-danger-soft: #fee2e2;
+  --color-success: #16a34a;
+  --color-success-soft: #dcfce7;
+  --color-warning: #d97706;
+  --color-warning-soft: #fef3c7;
+
+  /* Overlay / wash */
+  --color-overlay: rgba(26, 20, 16, 0.38);
+  --color-brand-wash: rgba(217, 119, 6, 0.06);
+  --color-focus-ring: rgba(217, 119, 6, 0.35);
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Shadows — amber-tinted warm */
+  --shadow-sm: 0 1px 2px rgba(120, 83, 44, 0.08);
+  --shadow-md: 0 6px 14px rgba(120, 83, 44, 0.10);
+  --shadow-lg: 0 14px 30px rgba(120, 83, 44, 0.14);
+
+  --font-sans: "Segoe UI", "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", Consolas, monospace;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Near-black surfaces — not pure #000 to avoid OLED smear on borders */
+  --color-bg: #0a0806;
+  --color-surface: #141210;
+  --color-surface-alt: #1c1815;
+  --color-border: #2b2620;
+  --color-border-strong: #3f3830;
+
+  /* Text — warm-white to match amber accent */
+  --color-text: #f5ebdc;
+  --color-text-muted: #c9bba2;
+  --color-text-subtle: #8f8472;
+
+  /* Primary / accent — brighter amber for dark bg contrast */
+  --color-primary: #fbbf24;
+  --color-primary-hover: #fcd34d;
+  --color-primary-soft: rgba(251, 191, 36, 0.16);
+  --color-accent: #fbbf24;
+  --color-accent-hover: #fcd34d;
+  --color-accent-soft: rgba(251, 191, 36, 0.16);
+
+  /* Status */
+  --color-danger: #f87171;
+  --color-danger-soft: rgba(248, 113, 113, 0.18);
+  --color-success: #4ade80;
+  --color-success-soft: rgba(74, 222, 128, 0.18);
+  --color-warning: #fbbf24;
+  --color-warning-soft: rgba(251, 191, 36, 0.18);
+
+  /* Overlay / wash */
+  --color-overlay: rgba(0, 0, 0, 0.75);
+  --color-brand-wash: rgba(251, 191, 36, 0.08);
+  --color-focus-ring: rgba(251, 191, 36, 0.45);
+
+  /* Shadows — deep black alpha */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.48);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.62);
+}
+
+:root[data-theme="cream"] {
+  color-scheme: light;
+
+  /* Cream surfaces — warm ivory ladder */
+  --color-bg: #f5eedc;
+  --color-surface: #fbf5e5;
+  --color-surface-alt: #efe6cf;
+  --color-border: #e2d5b3;
+  --color-border-strong: #c9b68a;
+
+  /* Text — deep espresso */
+  --color-text: #2a1d0f;
+  --color-text-muted: #5c4632;
+  --color-text-subtle: #8a7356;
+
+  /* Primary / accent — vibrant orange */
+  --color-primary: #ea580c;
+  --color-primary-hover: #c2410c;
+  --color-primary-soft: #fed7aa;
+  --color-accent: #ea580c;
+  --color-accent-hover: #c2410c;
+  --color-accent-soft: #fed7aa;
+
+  /* Status — tuned to read on cream */
+  --color-danger: #b91c1c;
+  --color-danger-soft: #fecaca;
+  --color-success: #15803d;
+  --color-success-soft: #bbf7d0;
+  --color-warning: #ea580c;
+  --color-warning-soft: #fed7aa;
+
+  /* Overlay / wash */
+  --color-overlay: rgba(42, 29, 15, 0.38);
+  --color-brand-wash: rgba(234, 88, 12, 0.07);
+  --color-focus-ring: rgba(234, 88, 12, 0.35);
+
+  /* Shadows — orange-tinted warm */
+  --shadow-sm: 0 1px 2px rgba(120, 53, 15, 0.10);
+  --shadow-md: 0 6px 14px rgba(120, 53, 15, 0.12);
+  --shadow-lg: 0 14px 30px rgba(120, 53, 15, 0.16);
+}

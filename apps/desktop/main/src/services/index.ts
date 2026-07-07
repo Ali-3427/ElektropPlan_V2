@@ -50,10 +50,7 @@ export function createServices(options: CreateServicesOptions): AppServices {
 
   return {
     calculate: createCalculateService(),
-    records: createRecordsService(
-      storage.repositories.records,
-      storage.repositories.groups,
-    ),
+    records: createRecordsService(storage.repositories),
     settings: createSettingsService(storage.repositories.settings),
     export: createExportService(),
     materials: createMaterialsService(storage.repositories),

@@ -1,0 +1,60 @@
+{
+  "input": {
+    "cases": [
+      {
+        "mode": "table",
+        "kW": 0.25,
+        "voltage": 220
+      },
+      {
+        "mode": "table",
+        "kW": 0.25,
+        "voltage": 380
+      }
+    ]
+  },
+  "expectedOutput": {
+    "cases": [
+      {
+        "formulaVariant": "table-mode-220V",
+        "value": {
+          "mode": "table",
+          "kW": 0.25,
+          "PS": 0.34,
+          "cosPhi": 0.7,
+          "efficiencyPercent": 62,
+          "currentA": 1.4,
+          "cableSpec": "4 x 2,5"
+        },
+        "assumptions": [
+          {
+            "field": "source",
+            "usedValue": "table",
+            "source": "estimated"
+          }
+        ]
+      },
+      {
+        "formulaVariant": "table-mode-380V",
+        "value": {
+          "mode": "table",
+          "kW": 0.25,
+          "PS": 0.34,
+          "cosPhi": 0.7,
+          "efficiencyPercent": 62,
+          "currentA": 0.8,
+          "cableSpec": "4 x 2,5"
+        },
+        "assumptions": [
+          {
+            "field": "source",
+            "usedValue": "table",
+            "source": "estimated"
+          }
+        ]
+      }
+    ]
+  },
+  "source": "Locked motor ruler dataset from master plan §2.6, row kW=0.25.",
+  "rationale": "Exercises exact table lookup at the smallest catalog row for both supported voltages."
+}

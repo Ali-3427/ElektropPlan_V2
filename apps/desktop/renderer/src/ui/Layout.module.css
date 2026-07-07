@@ -1,0 +1,297 @@
+.shell {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 340px;
+  min-height: 100vh;
+}
+
+.shell[data-quick-panel-collapsed="true"] {
+  grid-template-columns: 220px minmax(0, 1fr) 48px;
+}
+
+.shell[data-sidebar-collapsed="true"] {
+  grid-template-columns: 64px minmax(0, 1fr) 340px;
+}
+
+.shell[data-sidebar-collapsed="true"][data-quick-panel-collapsed="true"] {
+  grid-template-columns: 64px minmax(0, 1fr) 48px;
+}
+
+.shell[data-quick-panel-hidden="true"] {
+  grid-template-columns: 220px minmax(0, 1fr);
+}
+
+.shell[data-quick-panel-hidden="true"][data-sidebar-collapsed="true"] {
+  grid-template-columns: 64px minmax(0, 1fr);
+}
+
+.sidebar {
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  padding: var(--space-5) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.brand {
+  padding: var(--space-2) var(--space-2) var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sidebarToggle {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 36px;
+  block-size: 36px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.sidebarToggle:hover {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.sidebarToggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.sidebarToggleIcon {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebarToggleIcon > span {
+  display: block;
+  inline-size: 14px;
+  block-size: 2px;
+  border-radius: 999px;
+  background: currentcolor;
+}
+
+.logoWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 88px;
+  object-fit: contain;
+  object-position: center;
+  image-rendering: auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-block-size: 40px;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+  position: relative;
+}
+
+.navIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 28px;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.navLabel {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navItem:hover {
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navItem:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.navItemActive {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-hover);
+}
+
+.navItemActive::before {
+  content: "";
+  position: absolute;
+  inset-block: 6px;
+  inset-inline-start: 2px;
+  inline-size: 3px;
+  border-radius: 999px;
+  background: currentcolor;
+}
+
+.main {
+  background: var(--color-bg);
+  padding: var(--space-8);
+  overflow-y: auto;
+  max-height: 100vh;
+  min-width: 0;
+}
+
+.sidebarFooter {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.themeSegmented {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-alt);
+  min-inline-size: 0;
+}
+
+.themeSegment {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  min-inline-size: 0;
+  padding: var(--space-2) var(--space-1);
+  border-radius: calc(var(--radius-lg) - 4px);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.themeSegment:hover {
+  color: var(--color-text);
+}
+
+.themeSegment:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.themeSegmentActive {
+  background: var(--color-surface);
+  color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.footer {
+  padding: var(--space-2) var(--space-3);
+  font-size: 11px;
+  color: var(--color-text-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-alt);
+}
+
+.shell[data-sidebar-collapsed="true"] .sidebar {
+  padding-inline: var(--space-2);
+}
+
+.shell[data-sidebar-collapsed="true"] .brand {
+  padding-inline: 0;
+  padding-block-end: var(--space-3);
+  justify-content: center;
+}
+
+.shell[data-sidebar-collapsed="true"] .logoWrapper {
+  inline-size: 0;
+  overflow: hidden;
+}
+
+.shell[data-sidebar-collapsed="true"] .logoImage {
+  opacity: 0;
+  max-height: 0;
+}
+
+.shell[data-sidebar-collapsed="true"] .nav {
+  align-items: center;
+}
+
+.shell[data-sidebar-collapsed="true"] .navItem {
+  inline-size: 100%;
+  justify-content: center;
+  padding-inline: var(--space-2);
+}
+
+.shell[data-sidebar-collapsed="true"] .navIcon {
+  inline-size: auto;
+}
+
+.shell[data-sidebar-collapsed="true"] .navLabel {
+  max-inline-size: 0;
+  opacity: 0;
+}
+
+.shell[data-sidebar-collapsed="true"] .sidebarFooter {
+  overflow: hidden;
+}
+
+.shell[data-sidebar-collapsed="true"] .themeSegmented {
+  max-block-size: 0;
+  padding: 0;
+  border-width: 0;
+  overflow: hidden;
+}
+
+.shell[data-sidebar-collapsed="true"] .footer {
+  max-block-size: 0;
+  padding-block: 0;
+  border-width: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 1280px) {
+  .main {
+    padding: var(--space-6);
+  }
+
+  .logoImage {
+    max-height: 76px;
+  }
+}

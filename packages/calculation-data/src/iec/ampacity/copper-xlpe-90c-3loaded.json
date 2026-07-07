@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "id": "iec-60364-5-52-ampacity-copper-xlpe-90c-3loaded-v1",
+    "standard": "IEC 60364-5-52",
+    "revision": "v1",
+    "source": "Tablo B.52.3 (1.5–10 mm²) + Tablo B.52.5 / B.52.10 / B.52.12 (16–120 mm²)",
+    "validFrom": "2026-04-19",
+    "notes": "Koşullar: XLPE/EPR yalıtım (90°C), 3 yüklü iletken, trifaze. Referans sıcaklık: Havada 30°C, toprakta 20°C."
+  },
+  "material": "copper",
+  "conductorCount": 3,
+  "system": "three-phase",
+  "insulation": "XLPE/EPR",
+  "insulationTemperatureC": 90,
+  "referenceAmbientAirC": 30,
+  "referenceGroundC": 20,
+  "entries": [
+    { "crossSectionMm2": 1.5, "methods": { "A1": 17, "A2": 16.5, "B1": 21, "B2": 20, "C": 24, "D": 26, "E": 23 } },
+    { "crossSectionMm2": 2.5, "methods": { "A1": 23, "A2": 22, "B1": 28, "B2": 26, "C": 32, "D": 34, "E": 32 } },
+    { "crossSectionMm2": 4, "methods": { "A1": 30, "A2": 29, "B1": 37, "B2": 35, "C": 42, "D": 44, "E": 42 } },
+    { "crossSectionMm2": 6, "methods": { "A1": 39, "A2": 37, "B1": 47, "B2": 44, "C": 54, "D": 56, "E": 54 } },
+    { "crossSectionMm2": 10, "methods": { "A1": 52, "A2": 51, "B1": 64, "B2": 60, "C": 75, "D": 75, "E": 75 } },
+    { "crossSectionMm2": 16, "methods": { "A1": 61, "A2": 58, "B1": 73, "B2": 68, "C": 80, "D": 74, "E": 100 } },
+    { "crossSectionMm2": 25, "methods": { "A1": 80, "A2": 77, "B1": 95, "B2": 89, "C": 105, "D": 95, "E": 127 } },
+    { "crossSectionMm2": 35, "methods": { "A1": 99, "A2": 96, "B1": 117, "B2": 109, "C": 130, "D": 113, "E": 158 } },
+    { "crossSectionMm2": 50, "methods": { "A1": 119, "A2": 117, "B1": 141, "B2": 130, "C": 158, "D": 134, "E": 192 } },
+    { "crossSectionMm2": 70, "methods": { "A1": 151, "A2": 149, "B1": 179, "B2": 164, "C": 200, "D": 163, "E": 246 } },
+    { "crossSectionMm2": 95, "methods": { "A1": 182, "A2": 180, "B1": 216, "B2": 197, "C": 241, "D": 193, "E": 298 } },
+    { "crossSectionMm2": 120, "methods": { "A1": 210, "A2": 208, "B1": 249, "B2": 227, "C": 278, "D": 220, "E": 346 } }
+  ]
+}

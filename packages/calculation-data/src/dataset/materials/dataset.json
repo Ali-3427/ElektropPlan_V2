@@ -1,0 +1,2454 @@
+{
+  "metadata": {
+    "id": "materials",
+    "standard": "internal",
+    "revision": "materials-2026-05-19",
+    "source": "docs/MST malzeme listesi.xlsx",
+    "validFrom": "2026-05-19",
+    "notes": "Generated from Excel by build-materials-seed.mjs"
+  },
+  "categories": [
+    {
+      "id": "kacak-akim-koruma-roleleri",
+      "title": "KAÇAK AKIM KORUMA RÖLELERİ",
+      "orderValue": 1
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi",
+      "title": "OTOMATİK SİGORTALAR - C TİPİ",
+      "orderValue": 2
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi",
+      "title": "OTOMATİK SİGORTALAR - B TİPİ",
+      "orderValue": 3
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi",
+      "title": "MOTOR KORUMA ŞALTERLERİ (MS Serisi)",
+      "orderValue": 4
+    },
+    {
+      "id": "kontaktorler-af-serisi",
+      "title": "KONTAKTÖRLER (AF Serisi)",
+      "orderValue": 5
+    },
+    {
+      "id": "mini-kontaktorler-b6-30",
+      "title": "MİNİ KONTAKTÖRLER (B6-30)",
+      "orderValue": 6
+    },
+    {
+      "id": "yardimci-kontaklar",
+      "title": "YARDIMCI KONTAKLAR",
+      "orderValue": 7
+    },
+    {
+      "id": "soft-starterlar-psr-serisi",
+      "title": "SOFT STARTERLAR (PSR Serisi)",
+      "orderValue": 8
+    },
+    {
+      "id": "roleler-ve-soketler",
+      "title": "RÖLELER VE SOKETLER",
+      "orderValue": 9
+    },
+    {
+      "id": "darbe-akim-sartelleri",
+      "title": "DARBE AKIM ŞARTELLERİ",
+      "orderValue": 10
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup",
+      "title": "KOMPAKT GÜÇ ŞALTERLERİ - FORMULA 3 KUTUP",
+      "orderValue": 11
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup",
+      "title": "KOMPAKT GÜÇ ŞALTERLERİ - FORMULA 4 KUTUP",
+      "orderValue": 12
+    },
+    {
+      "id": "kompakt-guc-salterleri-tmax",
+      "title": "KOMPAKT GÜÇ ŞALTERLERİ - TMAX",
+      "orderValue": 13
+    },
+    {
+      "id": "acik-tip-guc-salterleri-ekip-dip-ls-i",
+      "title": "AÇIK TİP GÜÇ ŞALTERLERİ (Ekip Dip LS/I)",
+      "orderValue": 14
+    },
+    {
+      "id": "salter-aksesuarlari",
+      "title": "ŞALTER AKSESUARLARI",
+      "orderValue": 15
+    },
+    {
+      "id": "akim-trafolari",
+      "title": "AKIM TRAFOLARI",
+      "orderValue": 16
+    },
+    {
+      "id": "frekans-invertorleri-acq580",
+      "title": "FREKANS İNVERTÖRLERİ (ACQ580)",
+      "orderValue": 17
+    },
+    {
+      "id": "zaman-roleleri",
+      "title": "ZAMAN RÖLELERİ",
+      "orderValue": 18
+    },
+    {
+      "id": "trafolar-dc-ac",
+      "title": "TRAFOLAR (DC & AC)",
+      "orderValue": 19
+    },
+    {
+      "id": "yuk-ayiricilar",
+      "title": "YÜK AYIRICILAR",
+      "orderValue": 20
+    },
+    {
+      "id": "pako-kesiciler",
+      "title": "PAKO KESİCİLER",
+      "orderValue": 21
+    },
+    {
+      "id": "pano-kutulari-schneider",
+      "title": "PANO KUTULARI (Schneider)",
+      "orderValue": 22
+    },
+    {
+      "id": "pano-kutulari-metal",
+      "title": "PANO KUTULARI (Metal)",
+      "orderValue": 23
+    },
+    {
+      "id": "plastik-panolar-kombinasyon-kutulari",
+      "title": "PLASTİK PANOLAR / KOMBİNASYON KUTULARI",
+      "orderValue": 24
+    },
+    {
+      "id": "dagitim-baralari",
+      "title": "DAĞITIM BARALARI",
+      "orderValue": 25
+    },
+    {
+      "id": "klemensler",
+      "title": "KLEMENSLER",
+      "orderValue": 26
+    },
+    {
+      "id": "kablo-kanallari",
+      "title": "KABLO KANALLARI",
+      "orderValue": 27
+    },
+    {
+      "id": "ray-ve-aksesuarlar",
+      "title": "RAY VE AKSESUARLAR",
+      "orderValue": 28
+    },
+    {
+      "id": "etiketler",
+      "title": "ETİKETLER",
+      "orderValue": 29
+    },
+    {
+      "id": "kumanda-pakolari",
+      "title": "KUMANDA PAKOLARI",
+      "orderValue": 30
+    },
+    {
+      "id": "butonlar",
+      "title": "BUTONLAR",
+      "orderValue": 31
+    },
+    {
+      "id": "sinyalizasyon",
+      "title": "SİNYALİZASYON",
+      "orderValue": 32
+    },
+    {
+      "id": "pano-ici-aksesuarlar",
+      "title": "PANO İÇİ AKSESUARLAR",
+      "orderValue": 33
+    },
+    {
+      "id": "kumanda-kablolari-renkli",
+      "title": "KUMANDA KABLOLARI (Renkli)",
+      "orderValue": 34
+    },
+    {
+      "id": "guc-kablolari",
+      "title": "GÜÇ KABLOLARI",
+      "orderValue": 35
+    },
+    {
+      "id": "kablo-pabuclari-yuzuk",
+      "title": "KABLO PABUÇLARI - YÜZÜK",
+      "orderValue": 36
+    },
+    {
+      "id": "kablo-pabuclari-skp",
+      "title": "KABLO PABUÇLARI - SKP",
+      "orderValue": 37
+    },
+    {
+      "id": "kablo-aksesuarlari",
+      "title": "KABLO AKSESUARLARI",
+      "orderValue": 38
+    },
+    {
+      "id": "rekorlar-pg-sikmali",
+      "title": "REKORLAR - PG SIKMALI",
+      "orderValue": 39
+    },
+    {
+      "id": "rekorlar-pg-gecmeli",
+      "title": "REKORLAR - PG GEÇMELİ",
+      "orderValue": 40
+    }
+  ],
+  "materials": [
+    {
+      "id": "kacak-akim-koruma-roleleri--kakr-40a-30ma",
+      "categoryId": "kacak-akim-koruma-roleleri",
+      "name": "KAKR 40A 30mA",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kacak-akim-koruma-roleleri--kakr-25a-30ma-faz-notr",
+      "categoryId": "kacak-akim-koruma-roleleri",
+      "name": "KAKR 25A 30mA FAZ+NÖTR",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c80-3x80a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C80 3x80A",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c63-3x63",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C63 3X63",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c50-3x50a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C50 3X50A",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c50-3x50a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C50 3X50A+N",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c40-3x40a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C40 3X40A",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c40-3x40a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C40 3X40A+N",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c32-3x32a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C32 3X32A",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c32-3x32a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C32 3X32A+N",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c25-3x25a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C25 3X25A",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c25-3x25a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C25 3X25A+N",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c20-3x20a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C20 3X20A",
+      "orderValue": 11,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c20-3x20a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C20 3X20A+N",
+      "orderValue": 12,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c16-3x16a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C16 3X16A",
+      "orderValue": 13,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c16-3x16a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C16 3X16A+N",
+      "orderValue": 14,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c10-3x10a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C10 3X10A",
+      "orderValue": 15,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c10-3x10a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C10 3X10A+N",
+      "orderValue": 16,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c6-3x6a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C6 3X6A",
+      "orderValue": 17,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c6-3x6a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C6 3X6A+N",
+      "orderValue": 18,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c16-1x16a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C16 1X16A+N",
+      "orderValue": 19,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c10-1x10a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C10 1X10A+N",
+      "orderValue": 20,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c6-1x6a-n",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C6 1X6A+N",
+      "orderValue": 21,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-c-tipi--c6-2x6a",
+      "categoryId": "otomatik-sigortalar-c-tipi",
+      "name": "C6 2X6A",
+      "orderValue": 22,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b50-3x50a",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B50 3X50A",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b50-3x50a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B50 3X50A+N",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b40-3x40",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B40 3X40",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b40-3x40a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B40 3X40A+N",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b32-3x32a",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B32 3X32A",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b32-3x32a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B32 3X32A+N",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b25-3x25a",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B25 3X25A",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b25-3x25a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B25 3X25A+N",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b20-3x20a",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B20 3X20A",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b20-3x20a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B20 3X20A+N",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b16-3x16a",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B16 3X16A",
+      "orderValue": 11,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b16-3x16a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B16 3X16A+N",
+      "orderValue": 12,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b10-3x10a",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B10 3X10A",
+      "orderValue": 13,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b10-3x10-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B10 3X10+N",
+      "orderValue": 14,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b6-3x6a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B6 3X6A+N",
+      "orderValue": 15,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b16-1x16a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B16 1X16A+N",
+      "orderValue": 16,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b10-1x10a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B10 1X10A+N",
+      "orderValue": 17,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b6-1x6a-n",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B6 1X6A+N",
+      "orderValue": 18,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "otomatik-sigortalar-b-tipi--b6-2x6a",
+      "categoryId": "otomatik-sigortalar-b-tipi",
+      "name": "B6 2X6A",
+      "orderValue": 19,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms165-54",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS165-54",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms165-42",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS165-42",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-32-25-30a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-32  (25-30A)",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-25-20-25a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-25  (20-25A)",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-20-16-20a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-20  (16-20A)",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-16-10-16a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-16  (10-16A)",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-12-8-12a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-12  (8-12A)",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-10-6-3-10a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-10  (6,3-10A)",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-6-3-4-6-3a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-6,3  (4-6,3A)",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-4-2-5-4a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-4  (2,5-4A)",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-2-5-1-6-2-5a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-2,5  (1,6-2,5A)",
+      "orderValue": 11,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-1-6-1-0-1-6a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-1,6  (1,0-1,6A)",
+      "orderValue": 12,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-1-0-63-1-0a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-1  (0,63-1,0A)",
+      "orderValue": 13,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "motor-koruma-salterleri-ms-serisi--ms116-0-63-0-4-0-63a",
+      "categoryId": "motor-koruma-salterleri-ms-serisi",
+      "name": "MS116-0,63  (0,4-0,63A)",
+      "orderValue": 14,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af9-24v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF9 24V KONTAKTÖR",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af9-220v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF9 220V KONTAKTÖR",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af16-220v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF16 220V KONTAKTÖR",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af16-24v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF16 24V KONTAKTÖR",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af26-24v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF26 24V KONTAKTÖR",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af26-220v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF26 220V KONTAKTÖR",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af30-24v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF30 24V KONTAKTÖR",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af30-220v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF30 220V KONTAKTÖR",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af38-24v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF38 24V KONTAKTÖR",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kontaktorler-af-serisi--af38-220v-kontaktor",
+      "categoryId": "kontaktorler-af-serisi",
+      "name": "AF38 220V KONTAKTÖR",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "mini-kontaktorler-b6-30--b6-30-minikontaktor-24v-no",
+      "categoryId": "mini-kontaktorler-b6-30",
+      "name": "B6-30 MİNİKONTAKTÖR 24V NO",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "mini-kontaktorler-b6-30--b6-30-minikontaktor-24v-nc",
+      "categoryId": "mini-kontaktorler-b6-30",
+      "name": "B6-30 MİNİKONTAKTÖR 24V NC",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "mini-kontaktorler-b6-30--b6-30-minikontaktor-220v-no",
+      "categoryId": "mini-kontaktorler-b6-30",
+      "name": "B6-30 MİNİKONTAKTÖR 220V NO",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "mini-kontaktorler-b6-30--b6-30-minikontaktor-220v-nc",
+      "categoryId": "mini-kontaktorler-b6-30",
+      "name": "B6-30 MİNİKONTAKTÖR 220V NC",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "mini-kontaktorler-b6-30--b6-30-minikontaktor-380v-nc",
+      "categoryId": "mini-kontaktorler-b6-30",
+      "name": "B6-30 MİNİKONTAKTÖR 380V NC",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "yardimci-kontaklar--af-kontaktor-icin-yardimci-kontak-ustten",
+      "categoryId": "yardimci-kontaklar",
+      "name": "AF KONTAKTÖR İÇİN YARDIMCI KONTAK ÜSTTEN",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "yardimci-kontaklar--af-kontaktor-icin-yardimci-kontak-yandan",
+      "categoryId": "yardimci-kontaklar",
+      "name": "AF KONTAKTÖR İÇİN YARDIMCI KONTAK YANDAN",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "yardimci-kontaklar--b6-30-icin-yardimci-kontak-no",
+      "categoryId": "yardimci-kontaklar",
+      "name": "B6-30 için yardımcı kontak NO",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "yardimci-kontaklar--hkf1-11",
+      "categoryId": "yardimci-kontaklar",
+      "name": "HKF1-11",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "soft-starterlar-psr-serisi--psr6",
+      "categoryId": "soft-starterlar-psr-serisi",
+      "name": "PSR6",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "soft-starterlar-psr-serisi--psr9",
+      "categoryId": "soft-starterlar-psr-serisi",
+      "name": "PSR9",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "soft-starterlar-psr-serisi--psr12",
+      "categoryId": "soft-starterlar-psr-serisi",
+      "name": "PSR12",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "soft-starterlar-psr-serisi--psr16",
+      "categoryId": "soft-starterlar-psr-serisi",
+      "name": "PSR16",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "soft-starterlar-psr-serisi--psr25",
+      "categoryId": "soft-starterlar-psr-serisi",
+      "name": "PSR25",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "soft-starterlar-psr-serisi--psr30",
+      "categoryId": "soft-starterlar-psr-serisi",
+      "name": "PSR30",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "roleler-ve-soketler--24vdc-role-3-bacak",
+      "categoryId": "roleler-ve-soketler",
+      "name": "24Vdc röle 3 bacak",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "roleler-ve-soketler--24vdc-role-4-bacak",
+      "categoryId": "roleler-ve-soketler",
+      "name": "24Vdc röle 4 bacak",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "roleler-ve-soketler--24vac-role-3-bacak",
+      "categoryId": "roleler-ve-soketler",
+      "name": "24Vac RÖLE 3 BACAK",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "roleler-ve-soketler--24vac-role-4-bacak",
+      "categoryId": "roleler-ve-soketler",
+      "name": "24Vac RÖLE 4 BACAK",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "roleler-ve-soketler--3-bacak-soket",
+      "categoryId": "roleler-ve-soketler",
+      "name": "3 BACAK SOKET",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "roleler-ve-soketler--4-bacak-soket",
+      "categoryId": "roleler-ve-soketler",
+      "name": "4 BACAK SOKET",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "darbe-akim-sartelleri--darbe-akim-sarteli-220v",
+      "categoryId": "darbe-akim-sartelleri",
+      "name": "Darbe akım şarteli 220v",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "darbe-akim-sartelleri--darbe-akim-sarteli-24v",
+      "categoryId": "darbe-akim-sartelleri",
+      "name": "Darbe akım şarteli 24v",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--50a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "50A formula tmş 3 pol",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--60a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "60A formula tmş 3 pol",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--80a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "80A formula tmş 3 pol",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--100a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "100A formula tmş 3 pol",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--125a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "125A formula tmş 3 pol",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--160a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "160A formula tmş 3 pol",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--175a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "175A formula tmş 3 pol",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--200a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "200A formula tmş 3 pol",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--225a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "225A formula tmş 3 pol",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--250a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "250A formula tmş 3 pol",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--320a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "320A formula tmş 3 pol",
+      "orderValue": 11,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--400a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "400A formula tmş 3 pol",
+      "orderValue": 12,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-3-kutup--500a-formula-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-3-kutup",
+      "name": "500A formula tmş 3 pol",
+      "orderValue": 13,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--50a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "50A formula tmş 4 pol",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--60a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "60A formula tmş 4 pol",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--80a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "80A formula tmş 4 pol",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--100a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "100A formula tmş 4 pol",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--125a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "125A formula tmş 4 pol",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--160a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "160A formula tmş 4 pol",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--175a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "175A formula tmş 4 pol",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--200a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "200A formula tmş 4 pol",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--225a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "225A formula tmş 4 pol",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--250a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "250A formula tmş 4 pol",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--320a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "320A formula tmş 4 pol",
+      "orderValue": 11,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--400a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "400A formula tmş 4 pol",
+      "orderValue": 12,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-formula-4-kutup--500a-formula-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-formula-4-kutup",
+      "name": "500A formula tmş 4 pol",
+      "orderValue": 13,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-tmax--630a-tmax-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-tmax",
+      "name": "630A Tmax TMŞ 3 pol",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-tmax--800a-tmax-tms-3-pol",
+      "categoryId": "kompakt-guc-salterleri-tmax",
+      "name": "800A Tmax TMŞ 3 pol",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-tmax--630a-tmax-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-tmax",
+      "name": "630A Tmax TMŞ 4 pol",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kompakt-guc-salterleri-tmax--800a-tmax-tms-4-pol",
+      "categoryId": "kompakt-guc-salterleri-tmax",
+      "name": "800A Tmax TMŞ 4 pol",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "acik-tip-guc-salterleri-ekip-dip-ls-i--1000a-ekip-dip-ls-i-4-pol",
+      "categoryId": "acik-tip-guc-salterleri-ekip-dip-ls-i",
+      "name": "1000A Ekip Dip LS/I 4 pol",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "acik-tip-guc-salterleri-ekip-dip-ls-i--1250a-ekip-dip-ls-i-4-pol",
+      "categoryId": "acik-tip-guc-salterleri-ekip-dip-ls-i",
+      "name": "1250A Ekip Dip LS/I 4 pol",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "acik-tip-guc-salterleri-ekip-dip-ls-i--1600a-ekip-dip-ls-i-4-pol",
+      "categoryId": "acik-tip-guc-salterleri-ekip-dip-ls-i",
+      "name": "1600A Ekip Dip LS/I 4 pol",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "salter-aksesuarlari--formula-icin-doner-kumanda-kolu-saftli",
+      "categoryId": "salter-aksesuarlari",
+      "name": "Formula için döner kumanda kolu şaftlı",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "salter-aksesuarlari--formula-icin-actirma-bobini",
+      "categoryId": "salter-aksesuarlari",
+      "name": "Formula için açtırma bobini",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "salter-aksesuarlari--rd3-kakr-tms-icin",
+      "categoryId": "salter-aksesuarlari",
+      "name": "RD3 (KAKR TMŞ için)",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "akim-trafolari--tr5-a-toroid-akim-trafosu-210mm",
+      "categoryId": "akim-trafolari",
+      "name": "TR5/A TOROİD AKIM TRAFOSU 210mm",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "akim-trafolari--toroid-akim-trafosu-110mm",
+      "categoryId": "akim-trafolari",
+      "name": "TOROİD AKIM TRAFOSU 110mm",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq-ekran-montaj-kiti",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ EKRAN MONTAJ KİTİ",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-3-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 3 KW",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-4-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 4 KW",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-5-5-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 5.5 KW",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-7-5-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 7.5 KW",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-11-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 11 KW",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-15-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 15 KW",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-18-5-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 18.5 KW",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-22-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 22 KW",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-30-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 30 KW",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "frekans-invertorleri-acq580--acq580-37-kw",
+      "categoryId": "frekans-invertorleri-acq580",
+      "name": "ACQ580 37 KW",
+      "orderValue": 11,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "zaman-roleleri--astronomik-zaman-rolesi",
+      "categoryId": "zaman-roleleri",
+      "name": "Astronomik zaman rölesi",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "zaman-roleleri--zaman-rolesi-mcb-7",
+      "categoryId": "zaman-roleleri",
+      "name": "Zaman rölesi MCB 7",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "zaman-roleleri--zaman-rolesi-mcb-9",
+      "categoryId": "zaman-roleleri",
+      "name": "Zaman rölesi MCB 9",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "zaman-roleleri--zaman-rolesi-mcb-15",
+      "categoryId": "zaman-roleleri",
+      "name": "Zaman rölesi MCB 15",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--24v-5a-dc-trafo",
+      "categoryId": "trafolar-dc-ac",
+      "name": "24V 5A DC Trafo",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--24v-2-5a-dc-trafo",
+      "categoryId": "trafolar-dc-ac",
+      "name": "24V 2.5A DC Trafo",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--200-va-ac-trafo-f-n-0-220-0-24",
+      "categoryId": "trafolar-dc-ac",
+      "name": "200 VA AC TRAFO (F-N) 0-220 → 0-24",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--150-va-ac-trafo-f-n-0-220-0-24",
+      "categoryId": "trafolar-dc-ac",
+      "name": "150 VA AC TRAFO (F-N) 0-220 → 0-24",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--100-va-ac-trafo-f-n-0-220-0-24",
+      "categoryId": "trafolar-dc-ac",
+      "name": "100 VA AC TRAFO (F-N) 0-220 → 0-24",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--50-va-ac-trafo-f-n-0-220-0-24",
+      "categoryId": "trafolar-dc-ac",
+      "name": "50 VA AC TRAFO (F-N) 0-220 → 0-24",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--200-va-ac-trafo-f-f-400-400-0-24",
+      "categoryId": "trafolar-dc-ac",
+      "name": "200 VA AC TRAFO (F-F) 400-400 → 0-24",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--150-va-ac-trafo-f-f-400-400-0-24",
+      "categoryId": "trafolar-dc-ac",
+      "name": "150 VA AC TRAFO (F-F) 400-400 → 0-24",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--100-va-ac-trafo-f-f-400-400-0-24",
+      "categoryId": "trafolar-dc-ac",
+      "name": "100 VA AC TRAFO (F-F) 400-400 → 0-24",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "trafolar-dc-ac--50-va-ac-trafo-f-f-400-400-0-24",
+      "categoryId": "trafolar-dc-ac",
+      "name": "50 VA AC TRAFO (F-F) 400-400 → 0-24",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "yuk-ayiricilar--ot315-ot315e04",
+      "categoryId": "yuk-ayiricilar",
+      "name": "OT315 (OT315E04)",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--125a-kesici-pako",
+      "categoryId": "pako-kesiciler",
+      "name": "125A KESİCİ PAKO",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--100a-kesici-pako",
+      "categoryId": "pako-kesiciler",
+      "name": "100A KESİCİ PAKO",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--100-125-pako-icin-notr",
+      "categoryId": "pako-kesiciler",
+      "name": "100-125 pako için nötr",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--80a-kesici-pako",
+      "categoryId": "pako-kesiciler",
+      "name": "80A KESİCİ PAKO",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--63-80a-icin-notr",
+      "categoryId": "pako-kesiciler",
+      "name": "63-80A için nötr",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--60a-kesici-pako",
+      "categoryId": "pako-kesiciler",
+      "name": "60A KESİCİ PAKO",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--40a-kesici-pako",
+      "categoryId": "pako-kesiciler",
+      "name": "40A KESİCİ PAKO",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--25a-kesici-pako",
+      "categoryId": "pako-kesiciler",
+      "name": "25A KESİCİ PAKO",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--16a-kesici-pako",
+      "categoryId": "pako-kesiciler",
+      "name": "16A KESİCİ PAKO",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--16-40-notr",
+      "categoryId": "pako-kesiciler",
+      "name": "16-40 nötr",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pako-kesiciler--150a-n-pako-kesici",
+      "categoryId": "pako-kesiciler",
+      "name": "150A + N PAKO KESİCİ",
+      "orderValue": 11,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-schneider--80x80x30-schneider",
+      "categoryId": "pano-kutulari-schneider",
+      "name": "80x80x30 Schneider",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-schneider--100x120x30-yxgxd-schneider",
+      "categoryId": "pano-kutulari-schneider",
+      "name": "100x120x30 (YxGxD) Schneider",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-schneider--80x100x30-yxgxd-schneider",
+      "categoryId": "pano-kutulari-schneider",
+      "name": "80x100x30 (YxGxD) Schneider",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-schneider--180x160x40-yxgxd-schneider",
+      "categoryId": "pano-kutulari-schneider",
+      "name": "180x160x40 (YxGxD) Schneider",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-schneider--180x260x40-yxgxd-schneider",
+      "categoryId": "pano-kutulari-schneider",
+      "name": "180x260x40 (YxGxD) Schneider",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-schneider--1000x800x300-yxgxd-schneider",
+      "categoryId": "pano-kutulari-schneider",
+      "name": "1000x800x300 (YxGxD) Schneider",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-schneider--1000x1000x300-yxgxd-schneider",
+      "categoryId": "pano-kutulari-schneider",
+      "name": "1000x1000x300 (YxGxD) Schneider",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-schneider--800x1200x300-schneider",
+      "categoryId": "pano-kutulari-schneider",
+      "name": "800x1200x300 Schneider",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-schneider--600x600x250-schneider",
+      "categoryId": "pano-kutulari-schneider",
+      "name": "600x600x250 Schneider",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--120-20x100x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "120+20x100x30 (YxGxD)",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--140x140x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "140x140x30 (YxGxD)",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--120x140x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "120x140x30 (YxGxD)",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--140x120x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "140x120x30 (YxGxD)",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--120x120x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "120x120x30 (YxGxD)",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--100x120x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "100x120x30 (YxGxD)",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--120x100x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "120x100x30 (YxGxD)",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--100x100x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "100x100x30 (YxGxD)",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--80x100x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "80x100x30 (YxGxD)",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--100x80x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "100x80x30 (YxGxD)",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--80x80x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "80x80x30 (YxGxD)",
+      "orderValue": 11,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--60x80x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "60x80x30 (YxGxD)",
+      "orderValue": 12,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--80x60x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "80x60x30 (YxGxD)",
+      "orderValue": 13,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--60x60x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "60x60x30 (YxGxD)",
+      "orderValue": 14,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--40x60x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "40x60x30 (YxGxD)",
+      "orderValue": 15,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--60x40x30-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "60x40x30 (YxGxD)",
+      "orderValue": 16,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-kutulari-metal--40x40x25-yxgxd",
+      "categoryId": "pano-kutulari-metal",
+      "name": "40x40x25 (YxGxD)",
+      "orderValue": 17,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "plastik-panolar-kombinasyon-kutulari--40x50-plastik-pano",
+      "categoryId": "plastik-panolar-kombinasyon-kutulari",
+      "name": "40x50 plastik pano",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "plastik-panolar-kombinasyon-kutulari--30x40-plastik-pano",
+      "categoryId": "plastik-panolar-kombinasyon-kutulari",
+      "name": "30x40 plastik pano",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "plastik-panolar-kombinasyon-kutulari--30x40-bos-kombinasyon-kutusu",
+      "categoryId": "plastik-panolar-kombinasyon-kutulari",
+      "name": "30x40 boş kombinasyon kutusu",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "plastik-panolar-kombinasyon-kutulari--22x30-bos-kombinasyon-kutusu",
+      "categoryId": "plastik-panolar-kombinasyon-kutulari",
+      "name": "22x30 boş kombinasyon kutusu",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "dagitim-baralari--4x12-160a-dagitim-barasi",
+      "categoryId": "dagitim-baralari",
+      "name": "4x12 160A DAĞITIM BARASI",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "dagitim-baralari--4x15-120a-dagitim-barasi",
+      "categoryId": "dagitim-baralari",
+      "name": "4x15 120A DAĞITIM BARASI",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "dagitim-baralari--4x11-120a-dagitim-barasi",
+      "categoryId": "dagitim-baralari",
+      "name": "4x11 120A DAĞITIM BARASI",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "dagitim-baralari--4x7-120a-dagitim-barasi",
+      "categoryId": "dagitim-baralari",
+      "name": "4x7 120A DAĞITIM BARASI",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--sigortali-klemens",
+      "categoryId": "klemensler",
+      "name": "SİGORTALI KLEMENS",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--klemens-durdurucu",
+      "categoryId": "klemensler",
+      "name": "KLEMENS DURDURUCU",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--1-giris-2-cikis-klemens",
+      "categoryId": "klemensler",
+      "name": "1 GİRİŞ 2 ÇIKIŞ KLEMENS",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--2-katli-klemens",
+      "categoryId": "klemensler",
+      "name": "2 KATLI KLEMENS",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--3-katli-klemens",
+      "categoryId": "klemensler",
+      "name": "3 KATLI KLEMENS",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--1-5-klemens",
+      "categoryId": "klemensler",
+      "name": "1,5 KLEMENS",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--2-5-klemens",
+      "categoryId": "klemensler",
+      "name": "2,5 KLEMENS",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--4-klemens",
+      "categoryId": "klemensler",
+      "name": "4 KLEMENS",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--6-klemens",
+      "categoryId": "klemensler",
+      "name": "6 KLEMENS",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--10-klemens",
+      "categoryId": "klemensler",
+      "name": "10 KLEMENS",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--16-klemens",
+      "categoryId": "klemensler",
+      "name": "16 KLEMENS",
+      "orderValue": 11,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--4-toprak-klemens",
+      "categoryId": "klemensler",
+      "name": "4 TOPRAK KLEMENS",
+      "orderValue": 12,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "klemensler--10-toprak-klemens",
+      "categoryId": "klemensler",
+      "name": "10 TOPRAK KLEMENS",
+      "orderValue": 13,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-kanallari--80x60-kanal",
+      "categoryId": "kablo-kanallari",
+      "name": "80x60 Kanal",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-kanallari--60x60-kanal",
+      "categoryId": "kablo-kanallari",
+      "name": "60x60 Kanal",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-kanallari--40x60-kanal",
+      "categoryId": "kablo-kanallari",
+      "name": "40x60 Kanal",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-kanallari--25x60-kanal",
+      "categoryId": "kablo-kanallari",
+      "name": "25x60 Kanal",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "ray-ve-aksesuarlar--ray-yukselteci",
+      "categoryId": "ray-ve-aksesuarlar",
+      "name": "RAY YÜKSELTECİ",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "ray-ve-aksesuarlar--yuksek-ray",
+      "categoryId": "ray-ve-aksesuarlar",
+      "name": "YÜKSEK RAY",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "ray-ve-aksesuarlar--ray",
+      "categoryId": "ray-ve-aksesuarlar",
+      "name": "RAY",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "ray-ve-aksesuarlar--vida",
+      "categoryId": "ray-ve-aksesuarlar",
+      "name": "VİDA",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "etiketler--dis-etiket",
+      "categoryId": "etiketler",
+      "name": "DIŞ ETİKET",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "etiketler--ic-etiket",
+      "categoryId": "etiketler",
+      "name": "İÇ ETİKET",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kumanda-pakolari--0-1-pako-2-kademe",
+      "categoryId": "kumanda-pakolari",
+      "name": "0-1 PAKO (2 kademe)",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kumanda-pakolari--1-0-2-pako-3-kademe",
+      "categoryId": "kumanda-pakolari",
+      "name": "1-0-2 PAKO (3 kademe)",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kumanda-pakolari--1-2-3-4-5-pako-5-kademe",
+      "categoryId": "kumanda-pakolari",
+      "name": "1-2-3-4-5 PAKO (5 kademe)",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "butonlar--bas-cek-buton",
+      "categoryId": "butonlar",
+      "name": "Bas-Çek Buton",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "butonlar--ikiz-buton",
+      "categoryId": "butonlar",
+      "name": "İkiz Buton",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "sinyalizasyon--kirmizi-sinyal-lambasi",
+      "categoryId": "sinyalizasyon",
+      "name": "KIRMIZI SİNYAL LAMBASI",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "sinyalizasyon--24v-buzzer",
+      "categoryId": "sinyalizasyon",
+      "name": "24V BUZZER",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-ici-aksesuarlar--fan",
+      "categoryId": "pano-ici-aksesuarlar",
+      "name": "FAN",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "pano-ici-aksesuarlar--termostat",
+      "categoryId": "pano-ici-aksesuarlar",
+      "name": "TERMOSTAT",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kumanda-kablolari-renkli--0-5-mor",
+      "categoryId": "kumanda-kablolari-renkli",
+      "name": "0,5 MOR",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kumanda-kablolari-renkli--0-5-turuncu",
+      "categoryId": "kumanda-kablolari-renkli",
+      "name": "0,5 TURUNCU",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kumanda-kablolari-renkli--1-siyah",
+      "categoryId": "kumanda-kablolari-renkli",
+      "name": "1 SİYAH",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kumanda-kablolari-renkli--1-yesil",
+      "categoryId": "kumanda-kablolari-renkli",
+      "name": "1 YEŞİL",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kumanda-kablolari-renkli--1-mavi",
+      "categoryId": "kumanda-kablolari-renkli",
+      "name": "1 MAVİ",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "guc-kablolari--1-5-mm-kablo",
+      "categoryId": "guc-kablolari",
+      "name": "1,5 MM KABLO",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "guc-kablolari--2-5-mm-kablo",
+      "categoryId": "guc-kablolari",
+      "name": "2,5 MM KABLO",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "guc-kablolari--4-mm-kablo",
+      "categoryId": "guc-kablolari",
+      "name": "4 MM KABLO",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "guc-kablolari--6-mm-kablo",
+      "categoryId": "guc-kablolari",
+      "name": "6 MM KABLO",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "guc-kablolari--10-mm-kablo",
+      "categoryId": "guc-kablolari",
+      "name": "10 MM KABLO",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "guc-kablolari--25-mm-kablo",
+      "categoryId": "guc-kablolari",
+      "name": "25 MM KABLO",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "guc-kablolari--35-siyah-kablo",
+      "categoryId": "guc-kablolari",
+      "name": "35 SİYAH KABLO",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "guc-kablolari--16-mavi-kablo",
+      "categoryId": "guc-kablolari",
+      "name": "16 MAVİ KABLO",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-yuzuk--0-5-yuzuk",
+      "categoryId": "kablo-pabuclari-yuzuk",
+      "name": "0,5 YÜZÜK",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-yuzuk--1-yuzuk",
+      "categoryId": "kablo-pabuclari-yuzuk",
+      "name": "1 YÜZÜK",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-yuzuk--1-5-yuzuk",
+      "categoryId": "kablo-pabuclari-yuzuk",
+      "name": "1,5 YÜZÜK",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-yuzuk--2-5-yuzuk",
+      "categoryId": "kablo-pabuclari-yuzuk",
+      "name": "2,5 YÜZÜK",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-yuzuk--4-yuzuk",
+      "categoryId": "kablo-pabuclari-yuzuk",
+      "name": "4 YÜZÜK",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-yuzuk--16-yuzuk",
+      "categoryId": "kablo-pabuclari-yuzuk",
+      "name": "16 YÜZÜK",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-yuzuk--35-yuzuk",
+      "categoryId": "kablo-pabuclari-yuzuk",
+      "name": "35 YÜZÜK",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--25-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "25 SKP",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--35-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "35 SKP",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--50-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "50 SKP",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--70-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "70 SKP",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--95-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "95 SKP",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--120-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "120 SKP",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--150-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "150 SKP",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--185-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "185 SKP",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--240-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "240 SKP",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-pabuclari-skp--300-skp",
+      "categoryId": "kablo-pabuclari-skp",
+      "name": "300 SKP",
+      "orderValue": 10,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "kablo-aksesuarlari--helezon-spiral-no-4",
+      "categoryId": "kablo-aksesuarlari",
+      "name": "Helezon Spiral No: 4",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-sikmali--pg9-sikmali-rekor",
+      "categoryId": "rekorlar-pg-sikmali",
+      "name": "PG9 sıkmalı rekor",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-sikmali--pg11-sikmali-rekor",
+      "categoryId": "rekorlar-pg-sikmali",
+      "name": "PG11 sıkmalı rekor",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-sikmali--pg13-5-sikmali-rekor",
+      "categoryId": "rekorlar-pg-sikmali",
+      "name": "PG13,5 sıkmalı rekor",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-sikmali--pg16-sikmali-rekor",
+      "categoryId": "rekorlar-pg-sikmali",
+      "name": "PG16 sıkmalı rekor",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-sikmali--pg21-sikmali-rekor",
+      "categoryId": "rekorlar-pg-sikmali",
+      "name": "PG21 sıkmalı rekor",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-sikmali--pg29-sikmali-rekor",
+      "categoryId": "rekorlar-pg-sikmali",
+      "name": "PG29 sıkmalı rekor",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-sikmali--pg36-sikmali-rekor",
+      "categoryId": "rekorlar-pg-sikmali",
+      "name": "PG36 sıkmalı rekor",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-sikmali--pg42-sikmali-rekor",
+      "categoryId": "rekorlar-pg-sikmali",
+      "name": "PG42 sıkmalı rekor",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-sikmali--pg48-sikmali-rekor",
+      "categoryId": "rekorlar-pg-sikmali",
+      "name": "PG48 sıkmalı rekor",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-gecmeli--pg9-gecmeli-rekor",
+      "categoryId": "rekorlar-pg-gecmeli",
+      "name": "PG9 geçmeli rekor",
+      "orderValue": 1,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-gecmeli--pg11-gecmeli-rekor",
+      "categoryId": "rekorlar-pg-gecmeli",
+      "name": "PG11 geçmeli rekor",
+      "orderValue": 2,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-gecmeli--pg13-5-gecmeli-rekor",
+      "categoryId": "rekorlar-pg-gecmeli",
+      "name": "PG13,5 geçmeli rekor",
+      "orderValue": 3,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-gecmeli--pg16-gecmeli-rekor",
+      "categoryId": "rekorlar-pg-gecmeli",
+      "name": "PG16 geçmeli rekor",
+      "orderValue": 4,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-gecmeli--pg21-gecmeli-rekor",
+      "categoryId": "rekorlar-pg-gecmeli",
+      "name": "PG21 geçmeli rekor",
+      "orderValue": 5,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-gecmeli--pg29-gecmeli-rekor",
+      "categoryId": "rekorlar-pg-gecmeli",
+      "name": "PG29 geçmeli rekor",
+      "orderValue": 6,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-gecmeli--pg36-gecmeli-rekor",
+      "categoryId": "rekorlar-pg-gecmeli",
+      "name": "PG36 geçmeli rekor",
+      "orderValue": 7,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-gecmeli--pg42-gecmeli-rekor",
+      "categoryId": "rekorlar-pg-gecmeli",
+      "name": "PG42 geçmeli rekor",
+      "orderValue": 8,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    },
+    {
+      "id": "rekorlar-pg-gecmeli--pg48-gecmeli-rekor",
+      "categoryId": "rekorlar-pg-gecmeli",
+      "name": "PG48 geçmeli rekor",
+      "orderValue": 9,
+      "source": "seed",
+      "seedDataVersion": "materials-2026-05-19"
+    }
+  ]
+}

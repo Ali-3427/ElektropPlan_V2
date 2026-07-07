@@ -1,0 +1,46 @@
+{
+  "input": {
+    "designCurrentA": 70,
+    "phase": 3,
+    "conductorMaterial": "copper",
+    "installationMethod": "C",
+    "insulationRating": "XLPE_EPR_90C",
+    "ambientTemperatureC": 30,
+    "groupedCircuits": 1,
+    "thirdHarmonicPercent": 0,
+    "voltageDropLimitPercent": 5,
+    "voltageDrop": {
+      "systemType": "three-phase-ac-ll",
+      "impedanceMode": "exact-ac",
+      "lengthM": 25,
+      "baseVoltageV": 400,
+      "cosPhi": 0.9
+    }
+  },
+  "expectedOutput": {
+    "formulaVariant": "cable-sizing-ascending-scan",
+    "value": {
+      "selectedSectionMm2": 10,
+      "baseAmpacityA": 75,
+      "kT": 1,
+      "kG": 1,
+      "kH": 1,
+      "kTotal": 1,
+      "vdResult": {
+        "value": {
+          "deltaVPercent": 1.2021838099713906
+        }
+      }
+    },
+    "candidateTraceChecks": [
+      {
+        "sectionMm2": 10,
+        "thermalPass": true,
+        "vdPass": true,
+        "accepted": true
+      }
+    ]
+  },
+  "source": "IEC 60364-5-52 ampacity and correction-factor tables as shipped in calculation-data, combined with a hand-checked ascending scan per master plan §2.4.",
+  "rationale": "Covers a straightforward method C copper sizing case where the first thermally valid section also passes voltage-drop."
+}

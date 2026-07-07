@@ -168,6 +168,135 @@ export interface VoltageDropResponse {
   engineVersion: string;
 }
 
+// ── Voltage Drop Group ────────────────────────────────────────────────────────
+export type VoltageDropGroupPhaseMode = "auto" | "single-phase" | "three-phase";
+export type VoltageDropGroupSystemType = "single-phase-ac-two-conductor" | "three-phase-ac-ll";
+
+export interface VoltageDropGroupSegmentInput {
+  readonly id?: string;
+  readonly parentId?: string | null;
+  readonly title: string;
+  readonly loadPowerKW?: number;
+  readonly localPowerKW?: number;
+  readonly lengthM: number;
+  readonly fixedSectionKey?: string;
+  readonly sectionMm2?: number;
+  readonly settings?: VoltageDropGroupSegmentSettings;
+}
+
+export interface VoltageDropGroupSettings {
+  readonly limitPercent?: number;
+  readonly phaseMode?: VoltageDropGroupPhaseMode;
+  readonly singlePhaseVoltageV?: number;
+  readonly threePhaseVoltageV?: number;
+  readonly cosPhi?: number;
+  readonly efficiencyPercent?: number;
+  readonly conductorMaterial?: "copper" | "aluminum";
+  readonly installationMethod?: "A1" | "A2" | "B1" | "B2" | "C" | "D" | "E";
+  readonly insulationRating?: "PVC_70C" | "XLPE_EPR_90C";
+  readonly ambientTemperatureC?: number;
+  readonly groupedCircuits?: number;
+  readonly thirdHarmonicPercent?: number;
+  readonly conductorTempC?: number;
+  readonly impedanceMode?: VoltageDropImpedanceMode;
+  readonly reactanceOhmPerKm?: number;
+  readonly terminalLossFactor?: number;
+}
+
+export type VoltageDropGroupSegmentSettings = Omit<
+  VoltageDropGroupSettings,
+  "limitPercent" | "phaseMode" | "singlePhaseVoltageV" | "threePhaseVoltageV"
+>;
+
+export interface VoltageDropGroupRequest {
+  readonly title?: string;
+  readonly segments: readonly VoltageDropGroupSegmentInput[];
+  readonly settings?: VoltageDropGroupSettings;
+}
+
+export interface VoltageDropGroupResolvedSettings {
+  readonly limitPercent: number;
+  readonly phaseMode: VoltageDropGroupPhaseMode;
+  readonly systemType: VoltageDropGroupSystemType;
+  readonly baseVoltageV: number;
+  readonly cosPhi: number;
+  readonly efficiencyPercent: number;
+  readonly conductorMaterial: "copper" | "aluminum";
+  readonly installationMethod: "A1" | "A2" | "B1" | "B2" | "C" | "D" | "E";
+  readonly insulationRating: "PVC_70C" | "XLPE_EPR_90C";
+  readonly ambientTemperatureC: number;
+  readonly groupedCircuits: number;
+  readonly thirdHarmonicPercent: number;
+  readonly conductorTempC: number;
+  readonly impedanceMode: VoltageDropImpedanceMode;
+  readonly reactanceOhmPerKm?: number;
+  readonly terminalLossFactor: number;
+}
+
+export interface VoltageDropGroupSegmentOutput {
+  readonly id?: string;
+  readonly parentId?: string | null;
+  readonly title: string;
+  readonly order: number;
+  readonly depth?: number;
+  readonly childIds?: readonly string[];
+  readonly pathIds?: readonly string[];
+  readonly loadPowerKW?: number;
+  readonly localPowerKW: number;
+  readonly flowPowerKW: number;
+  readonly lengthM: number;
+  readonly currentA: number;
+  readonly selectedSectionKey?: string;
+  readonly selectedSectionAreaMm2?: number;
+  readonly selectedParallelRuns?: number;
+  readonly selectedSectionMm2: number;
+  readonly fixedSection?: boolean;
+  readonly settings?: Required<
+    Omit<
+      VoltageDropGroupSettings,
+      "limitPercent" | "phaseMode" | "singlePhaseVoltageV" | "threePhaseVoltageV" | "reactanceOhmPerKm"
+    >
+  > & { readonly reactanceOhmPerKm?: number };
+  readonly baseAmpacityA: number;
+  readonly correctedAmpacityA: number;
+  readonly segmentDeltaVVolts: number;
+  readonly segmentDeltaVPercent: number;
+  readonly cumulativeDeltaVPercent: number;
+  readonly thermalPass: boolean;
+  readonly voltageDropPass: boolean;
+  readonly compliant: boolean;
+}
+
+export interface VoltageDropGroupOptimizationStep {
+  readonly iteration: number;
+  readonly segmentOrder: number;
+  readonly segmentTitle: string;
+  readonly fromSectionMm2: number;
+  readonly toSectionMm2: number;
+  readonly previousMaxCumulativeDeltaVPercent: number;
+  readonly nextMaxCumulativeDeltaVPercent: number;
+  readonly sensitivityIndex: number;
+}
+
+export interface VoltageDropGroupOutput {
+  readonly title?: string;
+  readonly settings: VoltageDropGroupResolvedSettings;
+  readonly totalLocalPowerKW: number;
+  readonly maxCumulativeDeltaVPercent: number;
+  readonly isCompliant: boolean;
+  readonly segments: readonly VoltageDropGroupSegmentOutput[];
+  readonly optimizationSteps: readonly VoltageDropGroupOptimizationStep[];
+}
+
+export interface VoltageDropGroupResponse {
+  value: VoltageDropGroupOutput;
+  warnings: WarningEntry[];
+  assumptions: AssumptionEntry[];
+  formulaVariant: string;
+  dataVersion: string;
+  engineVersion: string;
+}
+
 // ── Cable ─────────────────────────────────────────────────────────────────────
 export type CableVoltageDropSystemType =
   | "single-phase-ac-two-conductor"
@@ -302,6 +431,16 @@ export interface MotorSuggestedCableSection {
   standardHintMm2?: 2.5 | 4;
 }
 
+// ── Manual Current ────────────────────────────────────────────────────────────
+export interface ManualCurrentRequest {
+  currentA: number;
+  label?: string;
+}
+
+export interface ManualCurrentResponse {
+  value: { currentA: number };
+}
+
 // ── Protection ────────────────────────────────────────────────────────────────
 export interface ProtectionRequest {
   minimumNominalCurrentA: number;
@@ -316,7 +455,13 @@ export interface ProtectionRequest {
 export type ProtectionResponse = unknown[];
 
 // ── Records / Groups ──────────────────────────────────────────────────────────
-export type CalculatorKind = "motor" | "voltage-drop" | "cable" | "protection";
+export type CalculatorKind =
+  | "motor"
+  | "voltage-drop"
+  | "voltage-drop-group"
+  | "cable"
+  | "protection"
+  | "manual-current";
 
 export interface RecordVersion {
   contractVersion: string;
@@ -353,6 +498,16 @@ export interface VoltageDropCalculationRecord {
   output: VoltageDropResponse;
 }
 
+export interface VoltageDropGroupCalculationRecord {
+  id: string;
+  calculator: "voltage-drop-group";
+  title?: string;
+  grouping?: GroupingMetadata;
+  version: RecordVersion;
+  input: VoltageDropGroupRequest;
+  output: VoltageDropGroupResponse;
+}
+
 export interface CableCalculationRecord {
   id: string;
   calculator: "cable";
@@ -373,11 +528,23 @@ export interface ProtectionCalculationRecord {
   output: ProtectionResponse;
 }
 
+export interface ManualCurrentCalculationRecord {
+  id: string;
+  calculator: "manual-current";
+  title?: string;
+  grouping?: GroupingMetadata;
+  version: RecordVersion;
+  input: ManualCurrentRequest;
+  output: ManualCurrentResponse;
+}
+
 export type CalculationRecord =
   | MotorCalculationRecord
   | VoltageDropCalculationRecord
+  | VoltageDropGroupCalculationRecord
   | CableCalculationRecord
-  | ProtectionCalculationRecord;
+  | ProtectionCalculationRecord
+  | ManualCurrentCalculationRecord;
 
 export interface CalculationGroup {
   id: string;
@@ -386,6 +553,16 @@ export interface CalculationGroup {
   order?: number;
   tags?: string[];
   version: RecordVersion;
+}
+
+export const PROJECT_MARKER_TAG = "project" as const;
+
+export function isProjectGroup(group: CalculationGroup): boolean {
+  if (group.parentGroupId !== undefined) {
+    return false;
+  }
+
+  return group.tags?.includes(PROJECT_MARKER_TAG) === true;
 }
 
 // ── Motor table DTO ───────────────────────────────────────────────────────────
@@ -433,6 +610,7 @@ export interface ElektroPlanBridge {
   readonly calc: Readonly<{
     motor(request: MotorRequest): Promise<MotorResponse>;
     voltageDrop(request: VoltageDropRequest): Promise<VoltageDropResponse>;
+    voltageDropGroup(request: VoltageDropGroupRequest): Promise<VoltageDropGroupResponse>;
     cable(request: CableRequest): Promise<CableResponse>;
     cableRuler(request: CableRulerRequest): Promise<CableRulerResponse>;
     groupCableSuggest(groupTotalCurrentA: number): Promise<GroupCableSuggestionResult>;
@@ -470,6 +648,7 @@ export interface ElektroPlanBridge {
   }>;
   readonly app: Readonly<{
     engineVersion(): Promise<string>;
+    version(): Promise<string>;
   }>;
   readonly materials: Readonly<{
     listCategories(): Promise<readonly MaterialCategory[]>;

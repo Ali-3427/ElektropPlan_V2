@@ -1,0 +1,22 @@
+{
+  "name": "@elektroplan/calculation-data",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b && node ./scripts/copy-json.mjs",
+    "build:materials": "node scripts/build-materials-seed.mjs",
+    "typecheck": "tsc -b --pretty false",
+    "lint": "eslint src --ext .ts",
+    "test": "tsc -b && node ./scripts/copy-json.mjs && node ./tests/run-iec-datasets.mjs && node ./tests/run-materials-seed.mjs && node ./tests/run-materials-dataset.mjs"
+  },
+  "dependencies": {
+    "@elektroplan/contracts": "file:../contracts",
+    "xlsx": "^0.18.5"
+  }
+}

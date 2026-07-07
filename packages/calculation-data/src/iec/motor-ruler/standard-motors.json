@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "id": "motor-ruler-standard-v1",
+    "standard": "ElektroPlan Standard Motor Table",
+    "revision": "v1",
+    "source": "locked project dataset (master plan §2.6)",
+    "validFrom": "2026-04-19",
+    "notes": "23 rows. '—' values preserved as JSON null. Do NOT interpolate."
+  },
+  "columns": [
+    "kW",
+    "PS",
+    "cosPhi",
+    "efficiencyPercent",
+    "currentA_220V",
+    "currentA_380V",
+    "cableSpec"
+  ],
+  "entries": [
+    { "kW": 0.25, "PS": 0.34, "cosPhi": 0.7, "efficiencyPercent": 62, "currentA_220V": 1.4, "currentA_380V": 0.8, "cableSpec": "4 x 2,5" },
+    { "kW": 0.37, "PS": 0.5, "cosPhi": 0.72, "efficiencyPercent": 64, "currentA_220V": 2.1, "currentA_380V": 1.6, "cableSpec": "4 x 2,5" },
+    { "kW": 0.55, "PS": 0.75, "cosPhi": 0.75, "efficiencyPercent": 69, "currentA_220V": 2.7, "currentA_380V": 1.6, "cableSpec": "4 x 2,5" },
+    { "kW": 0.75, "PS": 1, "cosPhi": 0.8, "efficiencyPercent": 74, "currentA_220V": 3.4, "currentA_380V": 2, "cableSpec": "4 x 2,5" },
+    { "kW": 1.1, "PS": 1.5, "cosPhi": 0.8, "efficiencyPercent": 77, "currentA_220V": 4.4, "currentA_380V": 2.6, "cableSpec": "4 x 2,5" },
+    { "kW": 1.5, "PS": 2, "cosPhi": 0.83, "efficiencyPercent": 78, "currentA_220V": 6, "currentA_380V": 3.5, "cableSpec": "4 x 2,5" },
+    { "kW": 2.2, "PS": 3, "cosPhi": 0.84, "efficiencyPercent": 81, "currentA_220V": 8.7, "currentA_380V": 5, "cableSpec": "4 x 2,5" },
+    { "kW": 3, "PS": 4, "cosPhi": 0.84, "efficiencyPercent": 81, "currentA_220V": 11.5, "currentA_380V": 6.5, "cableSpec": "4 x 2,5" },
+    { "kW": 4, "PS": 5.4, "cosPhi": 0.84, "efficiencyPercent": 82, "currentA_220V": 14.7, "currentA_380V": 8.5, "cableSpec": "4 x 2,5" },
+    { "kW": 5.5, "PS": 7.5, "cosPhi": 0.85, "efficiencyPercent": 83, "currentA_220V": 19.8, "currentA_380V": 11.5, "cableSpec": "4 x 2,5" },
+    { "kW": 7.5, "PS": 10, "cosPhi": 0.86, "efficiencyPercent": 85, "currentA_220V": 26.5, "currentA_380V": 15.5, "cableSpec": "4 x 4" },
+    { "kW": 11, "PS": 15, "cosPhi": 0.86, "efficiencyPercent": 87, "currentA_220V": 39, "currentA_380V": 22.5, "cableSpec": "4 x 6" },
+    { "kW": 15, "PS": 20, "cosPhi": 0.86, "efficiencyPercent": 87, "currentA_220V": 52, "currentA_380V": 30, "cableSpec": "4 x 6" },
+    { "kW": 18.5, "PS": 25, "cosPhi": 0.86, "efficiencyPercent": 88, "currentA_220V": 62, "currentA_380V": 36, "cableSpec": "4 x 10" },
+    { "kW": 22, "PS": 30, "cosPhi": 0.87, "efficiencyPercent": 89, "currentA_220V": 74, "currentA_380V": 43, "cableSpec": "4 x 10" },
+    { "kW": 30, "PS": 40, "cosPhi": 0.87, "efficiencyPercent": 90, "currentA_220V": 98, "currentA_380V": 57, "cableSpec": "4 x 16" },
+    { "kW": 37, "PS": 50, "cosPhi": 0.87, "efficiencyPercent": 90, "currentA_220V": 124, "currentA_380V": 72, "cableSpec": "3 x 25 + 16" },
+    { "kW": 45, "PS": 61, "cosPhi": 0.88, "efficiencyPercent": 91, "currentA_220V": 147, "currentA_380V": 85, "cableSpec": "3 x 35 + 16" },
+    { "kW": 55, "PS": 75, "cosPhi": 0.88, "efficiencyPercent": 91, "currentA_220V": 180, "currentA_380V": 104, "cableSpec": "3 x 50 + 25" },
+    { "kW": 75, "PS": 100, "cosPhi": 0.88, "efficiencyPercent": 91, "currentA_220V": 246, "currentA_380V": 142, "cableSpec": "3 x 70 + 35" },
+    { "kW": 90, "PS": 123, "cosPhi": 0.88, "efficiencyPercent": 92, "currentA_220V": 169, "currentA_380V": null, "cableSpec": "3 x 95 + 50" },
+    { "kW": 110, "PS": 150, "cosPhi": 0.88, "efficiencyPercent": 92, "currentA_220V": 204, "currentA_380V": null, "cableSpec": "3 x 120 + 70" },
+    { "kW": 132, "PS": 180, "cosPhi": 0.88, "efficiencyPercent": 92, "currentA_220V": 243, "currentA_380V": null, "cableSpec": "3 x 120 + 70" }
+  ]
+}

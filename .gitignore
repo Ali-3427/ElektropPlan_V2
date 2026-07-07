@@ -1,0 +1,11 @@
+**/bundle/
+**/bundle-old/
+**/dist/
+**/dist-old/
+**/release/
+**/release-old/
+**/.turbo/
+node_modules/
+**/node_modules/
+*.tsbuildinfo
+**/*.tsbuildinfo

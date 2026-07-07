@@ -1,4 +1,5 @@
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 import { app, BrowserWindow, ipcMain } from "electron";
 
@@ -29,6 +30,24 @@ function getRendererHtmlEntry(): string {
   return resolveBundledEntry("../../renderer/dist/index.html");
 }
 
+function hardenWindow(window: BrowserWindow): void {
+  // Never allow the renderer to open new windows.
+  window.webContents.setWindowOpenHandler(() => ({ action: "deny" }));
+
+  // Block navigation away from the trusted origin.
+  const trustedFileUrl = pathToFileURL(getRendererHtmlEntry()).href;
+
+  window.webContents.on("will-navigate", (event, url) => {
+    const allowed =
+      isDevelopment && devServerUrl
+        ? url.startsWith(devServerUrl)
+        : url === trustedFileUrl || url.startsWith(`${trustedFileUrl}#`);
+    if (!allowed) {
+      event.preventDefault();
+    }
+  });
+}
+
 function createMainWindow(): BrowserWindow {
   const mainWindow = new BrowserWindow({
     width: 1440,
@@ -41,9 +60,14 @@ function createMainWindow(): BrowserWindow {
       preload: getPreloadEntry(),
       contextIsolation: true,
       nodeIntegration: false,
+      // NOTE: sandbox must stay false — the preload is an ESM module
+      // ("type":"module"); Electron's sandbox only supports CommonJS preloads,
+      // so sandbox:true prevents contextBridge from exposing window.elektroPlan.
       sandbox: false
     }
   });
+
+  hardenWindow(mainWindow);
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
@@ -82,7 +106,10 @@ app.whenReady().then(() => {
     console.error('[materials] Seed failed (non-fatal):', err);
   });
 
-  registerIpcHandlers(ipcMain, services);
+  registerIpcHandlers(ipcMain, services, {
+    isDevelopment,
+    ...(devServerUrl === undefined ? {} : { devServerUrl }),
+  });
 
   createMainWindow();
 

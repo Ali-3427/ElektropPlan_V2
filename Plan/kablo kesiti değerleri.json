@@ -1,0 +1,164 @@
+[
+  {
+    "nominal_kesit_mm2": "0,5*",
+    "dis_cap_mm": 2.1,
+    "net_agirlik_kg_km": 9,
+    "sevk_uzunlugu_m": 100,
+    "dc_direnc_ohm_km_20C": 39.0,
+    "akim_toprak_20C_A": null,
+    "akim_hava_30C_A": 11
+  },
+  {
+    "nominal_kesit_mm2": "0,75*",
+    "dis_cap_mm": 2.3,
+    "net_agirlik_kg_km": 11,
+    "sevk_uzunlugu_m": 100,
+    "dc_direnc_ohm_km_20C": 26.0,
+    "akim_toprak_20C_A": null,
+    "akim_hava_30C_A": 16
+  },
+  {
+    "nominal_kesit_mm2": "1*",
+    "dis_cap_mm": 2.5,
+    "net_agirlik_kg_km": 14,
+    "sevk_uzunlugu_m": 100,
+    "dc_direnc_ohm_km_20C": 19.5,
+    "akim_toprak_20C_A": 11,
+    "akim_hava_30C_A": 20
+  },
+  {
+    "nominal_kesit_mm2": "1,5",
+    "dis_cap_mm": 3.0,
+    "net_agirlik_kg_km": 20,
+    "sevk_uzunlugu_m": 100,
+    "dc_direnc_ohm_km_20C": 13.3,
+    "akim_toprak_20C_A": 15,
+    "akim_hava_30C_A": 24
+  },
+  {
+    "nominal_kesit_mm2": "2,5",
+    "dis_cap_mm": 3.6,
+    "net_agirlik_kg_km": 32,
+    "sevk_uzunlugu_m": 100,
+    "dc_direnc_ohm_km_20C": 7.98,
+    "akim_toprak_20C_A": 20,
+    "akim_hava_30C_A": 32
+  },
+  {
+    "nominal_kesit_mm2": "4",
+    "dis_cap_mm": 4.2,
+    "net_agirlik_kg_km": 46,
+    "sevk_uzunlugu_m": 100,
+    "dc_direnc_ohm_km_20C": 4.95,
+    "akim_toprak_20C_A": 25,
+    "akim_hava_30C_A": 42
+  },
+  {
+    "nominal_kesit_mm2": "6",
+    "dis_cap_mm": 4.8,
+    "net_agirlik_kg_km": 65,
+    "sevk_uzunlugu_m": 100,
+    "dc_direnc_ohm_km_20C": 3.30,
+    "akim_toprak_20C_A": 33,
+    "akim_hava_30C_A": 54
+  },
+  {
+    "nominal_kesit_mm2": "10",
+    "dis_cap_mm": 6.5,
+    "net_agirlik_kg_km": 115,
+    "sevk_uzunlugu_m": 100,
+    "dc_direnc_ohm_km_20C": 1.91,
+    "akim_toprak_20C_A": 45,
+    "akim_hava_30C_A": 73
+  },
+  {
+    "nominal_kesit_mm2": "16",
+    "dis_cap_mm": 8.0,
+    "net_agirlik_kg_km": 175,
+    "sevk_uzunlugu_m": 100,
+    "dc_direnc_ohm_km_20C": 1.21,
+    "akim_toprak_20C_A": 61,
+    "akim_hava_30C_A": 98
+  },
+  {
+    "nominal_kesit_mm2": "25",
+    "dis_cap_mm": 10.0,
+    "net_agirlik_kg_km": 270,
+    "sevk_uzunlugu_m": 1000,
+    "dc_direnc_ohm_km_20C": 0.780,
+    "akim_toprak_20C_A": 83,
+    "akim_hava_30C_A": 129
+  },
+  {
+    "nominal_kesit_mm2": "35",
+    "dis_cap_mm": 11.0,
+    "net_agirlik_kg_km": 350,
+    "sevk_uzunlugu_m": 1000,
+    "dc_direnc_ohm_km_20C": 0.554,
+    "akim_toprak_20C_A": 103,
+    "akim_hava_30C_A": 158
+  },
+  {
+    "nominal_kesit_mm2": "50",
+    "dis_cap_mm": 13.5,
+    "net_agirlik_kg_km": 525,
+    "sevk_uzunlugu_m": 1000,
+    "dc_direnc_ohm_km_20C": 0.386,
+    "akim_toprak_20C_A": 132,
+    "akim_hava_30C_A": 198
+  },
+  {
+    "nominal_kesit_mm2": "70",
+    "dis_cap_mm": 15.0,
+    "net_agirlik_kg_km": 700,
+    "sevk_uzunlugu_m": 1000,
+    "dc_direnc_ohm_km_20C": 0.272,
+    "akim_toprak_20C_A": 165,
+    "akim_hava_30C_A": 245
+  },
+  {
+    "nominal_kesit_mm2": "95",
+    "dis_cap_mm": 17.5,
+    "net_agirlik_kg_km": 900,
+    "sevk_uzunlugu_m": 1000,
+    "dc_direnc_ohm_km_20C": 0.206,
+    "akim_toprak_20C_A": 197,
+    "akim_hava_30C_A": 292
+  },
+  {
+    "nominal_kesit_mm2": "120",
+    "dis_cap_mm": 19.5,
+    "net_agirlik_kg_km": 1200,
+    "sevk_uzunlugu_m": 1000,
+    "dc_direnc_ohm_km_20C": 0.161,
+    "akim_toprak_20C_A": 235,
+    "akim_hava_30C_A": 344
+  },
+  {
+    "nominal_kesit_mm2": "150",
+    "dis_cap_mm": 22.0,
+    "net_agirlik_kg_km": 1500,
+    "sevk_uzunlugu_m": 1000,
+    "dc_direnc_ohm_km_20C": 0.129,
+    "akim_toprak_20C_A": null,
+    "akim_hava_30C_A": 391
+  },
+  {
+    "nominal_kesit_mm2": "185",
+    "dis_cap_mm": 24.0,
+    "net_agirlik_kg_km": 1860,
+    "sevk_uzunlugu_m": 1000,
+    "dc_direnc_ohm_km_20C": 0.106,
+    "akim_toprak_20C_A": null,
+    "akim_hava_30C_A": 448
+  },
+  {
+    "nominal_kesit_mm2": "240",
+    "dis_cap_mm": 27.5,
+    "net_agirlik_kg_km": 2400,
+    "sevk_uzunlugu_m": 1000,
+    "dc_direnc_ohm_km_20C": 0.0801,
+    "akim_toprak_20C_A": null,
+    "akim_hava_30C_A": 528
+  }
+]

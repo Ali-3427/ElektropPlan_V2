@@ -1,0 +1,54 @@
+{
+  "input": {
+    "designCurrentA": 70,
+    "phase": 3,
+    "conductorMaterial": "aluminum",
+    "installationMethod": "B2",
+    "insulationRating": "XLPE_EPR_90C",
+    "ambientTemperatureC": 40,
+    "groupedCircuits": 2,
+    "thirdHarmonicPercent": 0,
+    "voltageDropLimitPercent": 5,
+    "voltageDrop": {
+      "systemType": "three-phase-ac-ll",
+      "impedanceMode": "exact-ac",
+      "lengthM": 80,
+      "baseVoltageV": 400,
+      "cosPhi": 0.9
+    }
+  },
+  "expectedOutput": {
+    "formulaVariant": "cable-sizing-ascending-scan",
+    "value": {
+      "selectedSectionMm2": 50,
+      "baseAmpacityA": 99,
+      "correctedAmpacityA": 79.2792,
+      "kT": 0.91,
+      "kG": 0.88,
+      "kH": 1,
+      "kTotal": 0.8008000000000001,
+      "izRequiredA": 87.4125874125874,
+      "vdResult": {
+        "value": {
+          "deltaVPercent": 1.3180415923868236
+        }
+      }
+    },
+    "candidateTraceChecks": [
+      {
+        "sectionMm2": 35,
+        "thermalPass": false,
+        "vdPass": true,
+        "accepted": false
+      },
+      {
+        "sectionMm2": 50,
+        "thermalPass": true,
+        "vdPass": true,
+        "accepted": true
+      }
+    ]
+  },
+  "source": "IEC 60364-5-52 ampacity and correction-factor tables as shipped in calculation-data, combined with a hand-checked ascending scan per master plan §2.4.",
+  "rationale": "Exercises a supported B2 aluminum case with non-unity temperature and grouping factors before the accepted section."
+}

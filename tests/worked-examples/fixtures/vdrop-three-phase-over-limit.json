@@ -1,0 +1,24 @@
+{
+  "input": {
+    "mode": "current",
+    "systemType": "three-phase-ac-ll",
+    "impedanceMode": "exact-ac",
+    "conductorMaterial": "copper",
+    "lengthM": 180,
+    "sectionMm2": 10,
+    "baseVoltageV": 400,
+    "currentA": 60,
+    "cosPhi": 0.9,
+    "reactanceOhmPerKm": 0.08
+  },
+  "expectedOutput": {
+    "formulaVariant": "three-phase-ac-ll",
+    "assumptions": [],
+    "value": {
+      "deltaVVolts": 29.67676605186518,
+      "deltaVPercent": 7.419191512966295
+    }
+  },
+  "source": "Hand calc from master plan §2.3 three-phase AC line-line voltage-drop formula with explicit reactance.",
+  "rationale": "Pins an over-limit three-phase case suitable for downstream cable-sizing gate checks."
+}

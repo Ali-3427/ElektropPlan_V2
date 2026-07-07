@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "id": "iec-60364-5-52-harmonic-factors-v1",
+    "standard": "IEC 60364-5-52",
+    "revision": "v1",
+    "source": "Ek E, Tablo E.52.1",
+    "validFrom": "2026-04-19",
+    "notes": "Algoritma notu: Harmonik oranı ≤ 33% → kablo kesiti faz akımı (Ib) üzerinden seçilir, kH faz tarafına uygulanır. Harmonik oranı > 33% → I_N = Ib × (harmonik_oran / 100) × 3; kablo kesiti I_N üzerinden seçilir ve kH nötr tarafına uygulanır."
+  },
+  "entries": [
+    {
+      "range": { "minPercent": 0, "maxPercent": 15, "minInclusive": true, "maxInclusive": true },
+      "phaseFactor": 1,
+      "neutralFactor": null,
+      "sizingCurrentBasis": "phase"
+    },
+    {
+      "range": { "minPercent": 15, "maxPercent": 33, "minInclusive": false, "maxInclusive": true },
+      "phaseFactor": 0.86,
+      "neutralFactor": null,
+      "sizingCurrentBasis": "phase"
+    },
+    {
+      "range": { "minPercent": 33, "maxPercent": 45, "minInclusive": false, "maxInclusive": true },
+      "phaseFactor": null,
+      "neutralFactor": 0.86,
+      "sizingCurrentBasis": "neutral"
+    },
+    {
+      "range": { "minPercent": 45, "maxPercent": null, "minInclusive": false, "maxInclusive": false },
+      "phaseFactor": null,
+      "neutralFactor": 1,
+      "sizingCurrentBasis": "neutral"
+    }
+  ]
+}

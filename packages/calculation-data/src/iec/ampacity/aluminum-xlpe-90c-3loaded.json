@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "id": "iec-60364-5-52-ampacity-aluminum-xlpe-90c-3loaded-v1",
+    "standard": "IEC 60364-5-52",
+    "revision": "v1",
+    "source": "Tablo B.52.3 / B.52.5 (10 mm²) + B.52.10 / B.52.12 (16–120 mm²)",
+    "validFrom": "2026-04-19",
+    "notes": "Koşullar: XLPE/EPR yalıtım (90°C), 3 yüklü iletken, trifaze. Minimum standart kesit: 16 mm² (mekanik nedenlerle). 10 mm² özel uygulamalar için tanımlanmıştır. 1.5–6 mm² Al: Standart tablolarda bulunmaz — bu aralıkta bakır kullanılmalıdır (UI uyarısı gerekli). Referans sıcaklık: Havada 30°C, toprakta 20°C."
+  },
+  "material": "aluminum",
+  "conductorCount": 3,
+  "system": "three-phase",
+  "insulation": "XLPE/EPR",
+  "insulationTemperatureC": 90,
+  "referenceAmbientAirC": 30,
+  "referenceGroundC": 20,
+  "entries": [
+    { "crossSectionMm2": 1.5, "methods": { "A1": null, "A2": null, "B1": null, "B2": null, "C": null, "D": null, "E": null } },
+    { "crossSectionMm2": 2.5, "methods": { "A1": null, "A2": null, "B1": null, "B2": null, "C": null, "D": null, "E": null } },
+    { "crossSectionMm2": 4, "methods": { "A1": null, "A2": null, "B1": null, "B2": null, "C": null, "D": null, "E": null } },
+    { "crossSectionMm2": 6, "methods": { "A1": null, "A2": null, "B1": null, "B2": null, "C": null, "D": null, "E": null } },
+    { "crossSectionMm2": 10, "methods": { "A1": 40, "A2": 39, "B1": 49, "B2": 46, "C": 58, "D": 57, "E": null } },
+    { "crossSectionMm2": 16, "methods": { "A1": 47, "A2": 45, "B1": 56, "B2": 53, "C": 62, "D": 57, "E": 78 } },
+    { "crossSectionMm2": 25, "methods": { "A1": 62, "A2": 59, "B1": 73, "B2": 69, "C": 82, "D": 73, "E": 99 } },
+    { "crossSectionMm2": 35, "methods": { "A1": 77, "A2": 73, "B1": 89, "B2": 83, "C": 101, "D": 87, "E": 122 } },
+    { "crossSectionMm2": 50, "methods": { "A1": 93, "A2": 89, "B1": 108, "B2": 99, "C": 122, "D": 104, "E": 148 } },
+    { "crossSectionMm2": 70, "methods": { "A1": 118, "A2": 113, "B1": 137, "B2": 125, "C": 155, "D": 126, "E": 191 } },
+    { "crossSectionMm2": 95, "methods": { "A1": 142, "A2": 137, "B1": 165, "B2": 150, "C": 187, "D": 150, "E": 232 } },
+    { "crossSectionMm2": 120, "methods": { "A1": 164, "A2": 159, "B1": 191, "B2": 174, "C": 216, "D": 171, "E": 270 } }
+  ]
+}

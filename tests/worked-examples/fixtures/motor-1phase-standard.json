@@ -1,0 +1,23 @@
+{
+  "input": {
+    "mode": "formula",
+    "phase": 1,
+    "P_out": 2.2,
+    "voltage": 220,
+    "cosPhi": 0.84,
+    "efficiencyPercent": 81
+  },
+  "expectedOutput": {
+    "formulaVariant": "single-phase",
+    "value": {
+      "mode": "formula",
+      "phase": 1,
+      "currentA": 14.69723691945914,
+      "inputPowerKW": 2.7160493827160495,
+      "apparentPowerKVA": 3.2333921222810114
+    },
+    "assumptions": []
+  },
+  "source": "Hand calc from master plan §2.2 locked single-phase current, input-power, and apparent-power formulas.",
+  "rationale": "Canonical formula-mode single-phase scenario with no assumptions and no table lookup."
+}

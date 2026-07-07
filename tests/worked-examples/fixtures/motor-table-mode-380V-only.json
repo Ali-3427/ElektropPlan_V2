@@ -1,0 +1,28 @@
+{
+  "input": {
+    "mode": "table",
+    "kW": 22,
+    "voltage": 380
+  },
+  "expectedOutput": {
+    "formulaVariant": "table-mode-380V",
+    "value": {
+      "mode": "table",
+      "kW": 22,
+      "PS": 30,
+      "cosPhi": 0.87,
+      "efficiencyPercent": 89,
+      "currentA": 43,
+      "cableSpec": "4 x 10"
+    },
+    "assumptions": [
+      {
+        "field": "source",
+        "usedValue": "table",
+        "source": "estimated"
+      }
+    ]
+  },
+  "source": "Locked motor ruler dataset from master plan §2.6, row kW=22 at 380 V.",
+  "rationale": "Pins the explicit plan example for 22 kW at 380 V with exact current and cable-spec fidelity."
+}

@@ -1,0 +1,9 @@
+export const RHO_COPPER_20 = 0.01724;
+export const RHO_ALUMINUM_20 = 0.02826;
+export const ALPHA_COPPER_20 = 0.00393;
+export const ALPHA_ALUMINUM_20 = 0.00403;
+export const SQRT3 = Math.sqrt(3);
+export const X_AC_FALLBACK_OHM_PER_KM = 0.08;
+export const J_REF_COPPER = 4;
+export const J_REF_ALUMINUM = 2.5;
+export const HP_TO_KW = 0.7457;

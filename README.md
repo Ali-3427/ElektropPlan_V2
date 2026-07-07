@@ -2,6 +2,8 @@
 
 Desktop app for electrical engineering calculations, built on IEC 60364-5-52.
 
+**Download:** [latest release (v1.8.0)](https://github.com/Ali-3427/ElektropPlan_V2/releases/tag/v1.8.0) — portable exe or Windows installer.
+
 ## What it does
 
 - **Cable sizing** — ampacity, correction factors (temperature, grouping, harmonics), installation methods (A1/A2/B1/B2/C/D/E), standard section selection
